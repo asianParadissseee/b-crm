@@ -1,9 +1,11 @@
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "@/router/app-router.tsx";
 
 const App = () => {
     return (
-        <div>
-
-        </div>
+        <BrowserRouter>
+            <AppRouter/>
+        </BrowserRouter>
     );
 };
 
