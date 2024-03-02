@@ -1,4 +1,4 @@
-import Layout from "@/layout/layout";
+import Layout from "@/layouts/layout";
 import Auth from "@/pages/auth/auth.tsx";
 import Home from "@/pages/home/home.tsx";
 
