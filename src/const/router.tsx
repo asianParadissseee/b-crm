@@ -5,14 +5,14 @@ import Home from "@/pages/home/home.tsx";
 export const router = [
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <Layout>
+        <Home />,
+      </Layout>
+    ),
   },
   {
-    path: "/",
+    path: "/auth",
     element: <Auth />,
-  },
-  {
-    path: "/user",
-    element: <Layout />,
   },
 ];
