@@ -79,7 +79,7 @@ const AccountingReport = () => {
                         <>
                             <Typography.Paragraph className="p-3">
                                 <b>Банк</b>:  {bank.name} <br/>
-                                <b>Сумма</b>: {bank.sum} соv
+                                <b>Сумма</b>: {bank.sum} сом
                             </Typography.Paragraph>
                         </>
                     ))
