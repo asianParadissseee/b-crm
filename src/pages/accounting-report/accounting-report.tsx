@@ -6,9 +6,9 @@ const {Column} = Table;
 const AccountingReport = () => {
 
     enum Currency {
-        DOLLAR = "доллар",
-        SOM = "сом",
-        TENGE = "тенге",
+        DOLLAR = "Доллар",
+        SOM = "Сом",
+        TENGE = "Тенге",
     }
 
     interface IBanks {
@@ -44,8 +44,8 @@ const AccountingReport = () => {
     const data: DataType[] = [
         {
             key: '1',
-            firstName: 'Akbar',
-            lastName: 'Maloer',
+            firstName: 'Асылбек',
+            lastName: 'Равшанов',
             sum: 32000,
             currency: Currency.SOM,
             appointment: ["Назначено по приказу директора"],
@@ -53,8 +53,8 @@ const AccountingReport = () => {
         },
         {
             key: '2',
-            firstName: 'Alisher',
-            lastName: 'Jumanov',
+            firstName: 'Айдин',
+            lastName: 'Джуманов',
             sum: 900,
             currency: Currency.DOLLAR,
             appointment: ["Назначено от отдела по продажам"],
@@ -62,8 +62,8 @@ const AccountingReport = () => {
         },
         {
             key: '3',
-            firstName: 'Asema',
-            lastName: 'Designer',
+            firstName: 'Раджан',
+            lastName: 'Ахматуллоев',
             sum: 200000,
             currency: Currency.TENGE,
             appointment: ["Назначено от клиентов"],
@@ -77,9 +77,9 @@ const AccountingReport = () => {
                 {
                     banks.map((bank) => (
                         <>
-                            <Typography.Paragraph className="p-3">
-                                <b>Банк</b>:  {bank.name} <br/>
-                                <b>Сумма</b>: {bank.sum} сом
+                            <Typography.Paragraph className="p-3" key={bank.name}>
+                                <b>Банк</b>: {bank.name} <br/>
+                                <b>Сумма</b>: {bank.sum} Cом
                             </Typography.Paragraph>
                         </>
                     ))
@@ -108,9 +108,9 @@ const AccountingReport = () => {
 
                 <Column
                     title={() => (
-                        <Button type="primary" className="bg-blue-900" size="large">
-                            Выгрузить в excel
-                        </Button>
+                            <Button type="primary" className="bg-blue-900" size="large">
+                                Выгрузить в excel
+                            </Button>
                     )}
                 />
             </Table>
