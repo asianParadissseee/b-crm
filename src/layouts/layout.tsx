@@ -67,7 +67,7 @@ const Layout = ({children}: LayoutProps) => {
             getItem("Team 1", "6"),
             getItem("Team 2", "8"),
         ]),
-        getItem("Files", "9", <FileOutlined/>),
+        getItem("Бухгалтерский отчет", "9", <FileOutlined onClick={()=>navigate("/home/accounting-report")}/>),
     ];
 
     return (
