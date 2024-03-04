@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,vue}\""
   },
   "dependencies": {
+    "husky": "^9.0.11",
     "vue": "^3.4.19"
   },
   "devDependencies": {
