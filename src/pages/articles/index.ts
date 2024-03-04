@@ -1,5 +1,3 @@
-import ArticlesPage from "./ui/articles-page.vue";
+import ArticlesPage from './ui/articles-page.vue'
 
-export {
-    ArticlesPage
-}
+export { ArticlesPage }

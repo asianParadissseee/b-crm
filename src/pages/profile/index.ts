@@ -1,5 +1,3 @@
-import ProfilePage from "./ui/profile.page.vue"
+import ProfilePage from './ui/profile.page.vue'
 
-export {
-    ProfilePage
-}
+export { ProfilePage }

@@ -1,5 +1,3 @@
-import CatalogPage from "./ui/catalog-page.vue";
+import CatalogPage from './ui/catalog-page.vue'
 
-export {
-    CatalogPage
-}
+export { CatalogPage }
