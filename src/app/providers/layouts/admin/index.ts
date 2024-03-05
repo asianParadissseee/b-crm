@@ -1,5 +1,3 @@
-import AdminLayout from "./ui/admin-layout.vue"
+import AdminLayout from './ui/admin-layout.vue'
 
-export {
-    AdminLayout
-}
+export { AdminLayout }

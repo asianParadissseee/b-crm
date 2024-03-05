@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import {RouterApp} from './providers/router'
-import {BaseLayout} from "./providers/layouts/base";
+import { RouterApp } from './providers/router'
+import { BaseLayout } from './providers/layouts/base'
 </script>
 
 <style scoped></style>

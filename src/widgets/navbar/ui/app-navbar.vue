@@ -5,7 +5,10 @@
   </header>
   <nav class="w-full mx-auto bg-orange-400">
     <ul class="flex container mx-auto justify-between items-center py-3">
-      <li v-for="link in routerLinks" :key="link.path">
+      <li
+        v-for="link in routerLinks"
+        :key="link.path"
+      >
         <router-link :to="link.path">
           {{ link.name.toUpperCase() }}
         </router-link>
@@ -15,7 +18,6 @@
 </template>
 
 <script setup lang="ts">
-
 const routerLinks = [
   {
     name: 'Каталог',
@@ -46,7 +48,6 @@ const routerLinks = [
     path: '/contacts'
   }
 ]
-
 </script>
 
 <style lang="scss" scoped></style>

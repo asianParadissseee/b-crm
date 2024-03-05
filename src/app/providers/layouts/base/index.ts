@@ -1,5 +1,3 @@
-import BaseLayout from "./ui/base-layout.vue"
+import BaseLayout from './ui/base-layout.vue'
 
-export {
-    BaseLayout
-}
+export { BaseLayout }
