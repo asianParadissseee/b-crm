@@ -1,5 +1,8 @@
 <template>
-  <router-link :to="props.to">
+  <router-link
+    :to="props.to"
+    :class="[alignTextClass, fontSizeClass, colorClass]"
+  >
     <slot></slot>
   </router-link>
 </template>
@@ -10,6 +13,7 @@ enum AppLinkAlign {
   LEFT = 'text-left',
   CENTER = 'text-center'
 }
+
 enum AppLinkFontSize {
   XXL = 'text-2xl',
   XL = 'text-xl',
@@ -19,13 +23,47 @@ enum AppLinkFontSize {
   XS = 'text-xs'
 }
 
-interface AppLinkProps {
-  to: string
-  alignText?: AppLinkAlign
-  fontSize?: AppLinkFontSize
+enum AppLinkColor {
+  GOLD = 'text-gold',
+  MUSTARD = 'text-mustard',
+  BODILY = 'text-bodily',
+  DARK = 'text-dark',
+  LIGHT_ASH = 'text-light_ash',
+  COAL = 'text-coal',
+  SILVER = 'text-silver',
+  ASH = 'text-ash',
+  SMOKE = 'text-smoke',
+  ALERT = 'text-alert'
 }
+//
+// interface AppLinkProps {
+//   to: string
+//   alignText?: AppLinkAlign
+//   fontSize?: AppLinkFontSize
+//   color?: AppLinkColor
+// }
 
-const props = defineProps<AppLinkProps>()
+const props = defineProps({
+  alignText: {
+    type: String as () => keyof typeof AppLinkAlign,
+    default: AppLinkAlign.CENTER
+  },
+  fontSize: {
+    type: String as () => keyof typeof AppLinkFontSize,
+    default: AppLinkFontSize.XL
+  },
+  color: {
+    type: String as () => keyof typeof AppLinkColor,
+    default: AppLinkColor.DARK
+  },
+  to: {
+    type: String,
+    default: ""
+  }
+})
+const alignTextClass = AppLinkAlign[props.alignText]
+const fontSizeClass = AppLinkFontSize[props.fontSize]
+const colorClass = AppLinkColor[props.color]
 </script>
 
 <style scoped></style>

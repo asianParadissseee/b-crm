@@ -17,13 +17,26 @@ enum AppTextFontSize {
   SM = 'text-sm',
   XS = 'text-xs'
 }
+enum AppTextColor {
+  GOLD = 'text-gold',
+  MUSTARD = 'text-mustard',
+  BODILY = 'text-bodily',
+  DARK = 'text-dark',
+  LIGHT_ASH = 'text-light_ash',
+  COAL = 'text-coal',
+  SILVER = 'text-silver',
+  ASH = 'text-ash',
+  SMOKE = 'text-smoke',
+  ALERT = 'text-alert'
+}
 
 interface AppTextProps {
   alignText?: AppTextAlign
   fontSize?: AppTextFontSize
+  color: AppTextColor
 }
 
- defineProps<AppTextProps>()
+defineProps<AppTextProps>()
 </script>
 
 <style lang="scss" scoped></style>
