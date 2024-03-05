@@ -1,7 +1,4 @@
-import {useCounterStore} from "./counter.ts"
-import {useGetUsersStore} from "./user.ts"
+import { useCounterStore } from './counter.ts'
+import { useGetUsersStore } from './user.ts'
 
-export {
-    useCounterStore,
-    useGetUsersStore
-}
+export { useCounterStore, useGetUsersStore }
