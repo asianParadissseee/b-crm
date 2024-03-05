@@ -11,7 +11,7 @@ export default {
         mustard: '#FFBC4B', //Горчичный цвет
         bodily: '#FFD999', //Телесный цвет
         dark: '#231F20', // Черный
-        sand: '#F5F5F5', //Песочный цвет
+        lightAsh: '#F5F5F5', //Серый цвет
         coal: '#EDEDED', //Угольный цвет
         silver: '#D9D9D9', //Серебряный цвет
         ash: '#BABABA', //Пепельный цвет
