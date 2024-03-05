@@ -3,13 +3,39 @@
     <div class="bg-lightAsh">
       <div class="container px-5 max-w-9/12 w-full h-10 mx-auto flex items-center justify-between">
         <div class="flex items-center gap-4">
-          <img :src="GeoOrangeIcon" alt="geolocation icon" width="12" height="14" />
+          <img
+            :src="GeoOrangeIcon"
+            alt="geolocation icon"
+            width="12"
+            height="14"
+          />
           City
         </div>
         <nav class="flex items-center justify-between gap-10">
-          <div><img :src="WhatsAppIcon" alt="whats app icon" width="24" height="24" /></div>
-          <div><img :src="EmailIcon" alt="email icon" width="12" height="12" /></div>
-          <div><img :src="TelephoneIcon" alt="telephone icon" width="12" height="12" /></div>
+          <div>
+            <img
+              :src="WhatsAppIcon"
+              alt="whats app icon"
+              width="24"
+              height="24"
+            />
+          </div>
+          <div>
+            <img
+              :src="EmailIcon"
+              alt="email icon"
+              width="12"
+              height="12"
+            />
+          </div>
+          <div>
+            <img
+              :src="TelephoneIcon"
+              alt="telephone icon"
+              width="12"
+              height="12"
+            />
+          </div>
         </nav>
       </div>
     </div>
