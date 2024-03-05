@@ -1,4 +1,2 @@
-import AppNavbar from "./ui/app-navbar.vue"
-export {
-    AppNavbar
-}
+import AppNavbar from './ui/app-navbar.vue'
+export { AppNavbar }

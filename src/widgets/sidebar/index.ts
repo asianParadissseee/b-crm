@@ -1,5 +1,3 @@
-import AppSidebar from "./ui/app-sidebar.vue"
+import AppSidebar from './ui/app-sidebar.vue'
 
-export {
-    AppSidebar
-}
+export { AppSidebar }
