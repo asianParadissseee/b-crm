@@ -1,5 +1,3 @@
-import NewsPage from "./ui/news-page.vue"
+import NewsPage from './ui/news-page.vue'
 
-export {
-  NewsPage
-}
+export { NewsPage }
