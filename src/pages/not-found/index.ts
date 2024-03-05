@@ -1,5 +1,3 @@
-import NotFound from "./ui/not-found.vue";
+import NotFound from './ui/not-found.vue'
 
-export {
-    NotFound
-}
+export { NotFound }
