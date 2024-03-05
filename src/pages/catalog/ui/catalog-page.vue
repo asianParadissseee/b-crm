@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>сам каталог</div>
 </template>
 
 <script lang="ts" setup></script>

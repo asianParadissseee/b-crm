@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>корзинка</div>
 </template>
 
 <script lang="ts" setup></script>
