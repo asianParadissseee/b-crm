@@ -20,9 +20,19 @@ enum AppTitleColor {
   SMOKE = 'text-smoke',
   ALERT = 'text-alert'
 }
+enum AppTitleFontSize {
+  XXL = 'text-5xl',
+  XL = 'text-xl',
+  LG = 'text-xl',
+  BASE = 'text-base',
+  SM = 'text-sm',
+  XS = 'text-xs'
+}
+
 interface AppTitleProps {
   align?: AppTitleAlign
   color?: AppTitleColor
+  fontSize?: AppTitleFontSize
 }
 
 defineProps<AppTitleProps>()

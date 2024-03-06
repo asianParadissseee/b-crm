@@ -35,14 +35,6 @@ enum AppLinkColor {
   SMOKE = 'text-smoke',
   ALERT = 'text-alert'
 }
-//
-// interface AppLinkProps {
-//   to: string
-//   alignText?: AppLinkAlign
-//   fontSize?: AppLinkFontSize
-//   color?: AppLinkColor
-// }
-
 const props = defineProps({
   alignText: {
     type: String as () => keyof typeof AppLinkAlign,
@@ -58,7 +50,7 @@ const props = defineProps({
   },
   to: {
     type: String,
-    default: ""
+    default: ''
   }
 })
 const alignTextClass = AppLinkAlign[props.alignText]
