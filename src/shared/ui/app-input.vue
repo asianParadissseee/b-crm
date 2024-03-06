@@ -1,16 +1,36 @@
 <template>
   <div class="flex relative">
-    <input type="text"
-           :value="props.value"
-           :class="['h-10', 'w-full', 'px-2', 'px-3', 'rounded', 'bg-white', 'border-2','outline-none', sizeClass, borderColorClass]" />
-    <div class="w-10 h-10 flex justify-center items-center bg-gold absolute right-0 rounded-r" v-if="isIcon">
-      <img :src="SearchLightIcon" alt="icon of search" width="16" height="16" />
+    <input
+      type="text"
+      :value="props.value"
+      :class="[
+        'h-10',
+        'w-full',
+        'px-2',
+        'px-3',
+        'rounded',
+        'bg-white',
+        'border-2',
+        'outline-none',
+        sizeClass,
+        borderColorClass
+      ]"
+    />
+    <div
+      class="w-10 h-10 flex justify-center items-center bg-gold absolute right-0 rounded-r"
+      v-if="isIcon"
+    >
+      <img
+        :src="SearchLightIcon"
+        alt="icon of search"
+        width="16"
+        height="16"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
 import SearchLightIcon from '@/shared/assets/icons/search-light.svg'
 
 enum AppInputSize {
@@ -22,9 +42,8 @@ enum AppInputSize {
 enum AppInputBorderColor {
   GOLD = 'border-gold',
   COAL = 'border-coal',
-  ERROR = 'border-alert',
+  ERROR = 'border-alert'
 }
-
 
 const props = defineProps({
   value: String,
@@ -42,7 +61,6 @@ const props = defineProps({
 
 const sizeClass = AppInputSize[props.size]
 const borderColorClass = AppInputBorderColor[props.borderColor]
-
 </script>
 
 <style lang="scss" scoped></style>

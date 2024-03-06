@@ -44,7 +44,11 @@
     </div>
     <div class="container px-5 max-w-9/12 w-full mx-auto flex items-center justify-between py-5">
       <app-logo />
-      <app-input :border-color="'GOLD'" :size="'DESKTOP'" is-icon />
+      <app-input
+        :border-color="'GOLD'"
+        :size="'DESKTOP'"
+        is-icon
+      />
       <div
         @click="handleHref(hrefAttr.TELEPHONE, '+7 (495) 103-48-50')"
         class="cursor-pointer"
@@ -96,6 +100,7 @@
         <app-link
           :to="link.path"
           :color="'DARK'"
+          :font-weight="'MEDIUM'"
           :align-text="'CENTER'"
           :font-size="'BASE'"
         >
