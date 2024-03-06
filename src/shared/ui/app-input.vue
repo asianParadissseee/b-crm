@@ -3,17 +3,7 @@
     <input
       type="text"
       :value="props.value"
-      :class="[
-        'h-10',
-        'px-2',
-        'px-3',
-        'rounded',
-        'bg-white',
-        'border-2',
-        'outline-none',
-        sizeClass,
-        borderColorClass
-      ]"
+      :class="['h-10', 'px-2', 'px-3', 'rounded', 'bg-white', 'border-2', 'outline-none', sizeClass, borderColorClass]"
     />
     <div
       class="w-10 h-10 flex justify-center items-center bg-gold absolute right-0 rounded-r"

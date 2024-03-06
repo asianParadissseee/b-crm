@@ -11,7 +11,7 @@ import AppBurger from '@/shared/ui/app-burger.vue'
   <header>
     <div class="container px-5 max-w-9/12 w-full mx-auto flex justify-between items-center">
       <app-logo />
-      <div class="hidden md:flex gap-3 ">
+      <div class="hidden md:flex gap-3">
         <img
           :src="WhatsAppIcon"
           alt="whats app icon"
@@ -65,7 +65,11 @@ import AppBurger from '@/shared/ui/app-burger.vue'
     </div>
     <div class="container px-5 max-w-9/12 w-full mx-auto flex justify-between items-center mt-7">
       <app-burger />
-      <app-input is-icon :border-color="'GOLD'" :size="'TABLET'" />
+      <app-input
+        is-icon
+        :border-color="'GOLD'"
+        :size="'TABLET'"
+      />
     </div>
   </header>
 </template>

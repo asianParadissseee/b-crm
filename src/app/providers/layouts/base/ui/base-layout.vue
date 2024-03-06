@@ -1,28 +1,17 @@
 <template>
-  <app-navbar v-if="!isMobile" />
+  <app-navbar v-if="!isResponsive" />
   <app-navbar-media v-else />
   <slot></slot>
   <app-footer />
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
 import { AppNavbar, AppNavbarMedia } from '@/widgets/navbar'
 import { AppFooter } from '@/widgets/footer'
-const isMobile = ref(false)
+import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
 
-const checkWindowSize = () => {
-  isMobile.value = window.innerWidth <= 1024
-}
+const {isResponsive} = useWindowSize(1024)
 
-onMounted(() => {
-  checkWindowSize()
-  window.addEventListener('resize', checkWindowSize)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', checkWindowSize)
-})
 </script>
 
 <style lang="scss" scoped></style>
