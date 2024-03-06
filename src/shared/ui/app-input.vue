@@ -5,7 +5,6 @@
       :value="props.value"
       :class="[
         'h-10',
-        'w-full',
         'px-2',
         'px-3',
         'rounded',
@@ -34,9 +33,9 @@
 import SearchLightIcon from '@/shared/assets/icons/search-light.svg'
 
 enum AppInputSize {
-  DEFAULT = 'max-w-60',
-  TABLET = 'max-w-screen',
-  DESKTOP = 'max-w-[31.438rem]'
+  DEFAULT = 'max-w-60 w-full',
+  TABLET = 'max-w-[40rem] w-full',
+  DESKTOP = 'max-w-[31.438rem] w-full'
 }
 
 enum AppInputBorderColor {
