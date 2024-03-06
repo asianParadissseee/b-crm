@@ -1,5 +1,5 @@
 <template>
-  <p :class="[alignTextClass, fontSizeClass, colorClass, fontWeightClass ]">
+  <p :class="[alignTextClass, fontSizeClass, colorClass, fontWeightClass]">
     <slot></slot>
   </p>
 </template>
@@ -37,7 +37,6 @@ enum AppTextFontWeight {
   MEDIUM = 'font-medium\t'
 }
 
-
 const props = defineProps({
   alignText: {
     type: String as () => keyof typeof AppTextAlign,
@@ -54,14 +53,13 @@ const props = defineProps({
   fontWeight: {
     type: String as () => keyof typeof AppTextFontWeight,
     default: AppTextFontWeight.MEDIUM
-  },
+  }
 })
 
 const alignTextClass = AppTextAlign[props.alignText]
 const fontSizeClass = AppTextFontSize[props.fontSize]
 const colorClass = AppTextColor[props.color]
-const fontWeightClass =  AppTextFontWeight[props.fontWeight]
-
+const fontWeightClass = AppTextFontWeight[props.fontWeight]
 </script>
 
 <style lang="scss" scoped></style>

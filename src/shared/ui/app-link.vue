@@ -66,7 +66,7 @@ const props = defineProps({
 const alignTextClass = AppLinkAlign[props.alignText]
 const fontSizeClass = AppLinkFontSize[props.fontSize]
 const colorClass = AppLinkColor[props.color]
-const fontWeightClass =  AppLinkFontWeight[props.fontWeight]
+const fontWeightClass = AppLinkFontWeight[props.fontWeight]
 </script>
 
 <style scoped></style>

@@ -48,7 +48,12 @@
         :key="link.path"
         class="flex items-center gap-10"
       >
-        <app-link :to="link.path" :color="'DARK'" :align-text="'CENTER'" :font-size="'BASE'">
+        <app-link
+          :to="link.path"
+          :color="'DARK'"
+          :align-text="'CENTER'"
+          :font-size="'BASE'"
+        >
           {{ link.name.toUpperCase() }}
         </app-link>
         <span
