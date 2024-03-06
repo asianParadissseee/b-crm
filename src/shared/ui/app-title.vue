@@ -35,8 +35,6 @@ enum AppTitleFontWeight {
   MEDIUM = 'font-medium'
 }
 
-
-
 const props = defineProps({
   alignText: {
     type: String as () => keyof typeof AppTitleAlign,
