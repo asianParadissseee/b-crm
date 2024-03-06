@@ -33,8 +33,8 @@ enum AppTextColor {
 }
 
 enum AppTextFontWeight {
-  NORMAL = 'font-normal\t',
-  MEDIUM = 'font-medium\t'
+  NORMAL = 'font-normal',
+  MEDIUM = 'font-medium'
 }
 
 const props = defineProps({
