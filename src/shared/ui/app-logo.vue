@@ -4,7 +4,7 @@
       :src="AppLogo"
       alt="icon for logo of website"
       :width="isResponsive ? 137 : 239"
-      :height="isResponsive ? 35 :61"
+      :height="isResponsive ? 35 : 61"
     />
   </div>
 </template>
