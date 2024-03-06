@@ -19,7 +19,11 @@
           </app-text>
         </div>
         <nav class="flex items-center justify-between gap-10">
-          <div v-for="(social,id) in socialLinks" :key="id" class="flex gap-2">
+          <div
+            v-for="(social, id) in socialLinks"
+            :key="id"
+            class="flex gap-2"
+          >
             <img
               class="cursor-pointer"
               :src="social.icon"

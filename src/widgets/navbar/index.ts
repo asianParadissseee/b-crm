@@ -1,2 +1,3 @@
 import AppNavbar from './ui/app-navbar.vue'
-export { AppNavbar }
+import AppNavbarMedia from './ui/app-navbarMedia.vue'
+export { AppNavbar,AppNavbarMedia }
