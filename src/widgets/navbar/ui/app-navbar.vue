@@ -48,9 +48,9 @@
         :key="link.path"
         class="flex items-center gap-10"
       >
-        <router-link :to="link.path">
+        <app-link :to="link.path" :color="'DARK'" :align-text="'CENTER'" :font-size="'BASE'">
           {{ link.name.toUpperCase() }}
-        </router-link>
+        </app-link>
         <span
           v-if="id < routerLinks.length - 1"
           class="ml-10 h-5 w-0.5 bg-dark hidden xl:block"
@@ -65,6 +65,7 @@ import GeoOrangeIcon from '@/shared/assets/icons/orange-geo.svg'
 import TelephoneIcon from '@/shared/assets/icons/telephone-icon.svg'
 import WhatsAppIcon from '@/shared/assets/icons/whatsapp.svg'
 import EmailIcon from '@/shared/assets/icons/email.svg'
+import AppLink from '@/shared/ui/app-link.vue'
 
 const routerLinks = [
   {

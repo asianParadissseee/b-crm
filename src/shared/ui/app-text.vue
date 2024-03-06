@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <p :class="[alignTextClass, fontSizeClass, colorClass, fontWeightClass ]">
+    <slot></slot>
+  </p>
 </template>
 
 <script setup lang="ts">
@@ -30,13 +32,36 @@ enum AppTextColor {
   ALERT = 'text-alert'
 }
 
-interface AppTextProps {
-  alignText?: AppTextAlign
-  fontSize?: AppTextFontSize
-  color: AppTextColor
+enum AppTextFontWeight {
+  NORMAL = 'font-normal\t',
+  MEDIUM = 'font-medium\t'
 }
 
-defineProps<AppTextProps>()
+
+const props = defineProps({
+  alignText: {
+    type: String as () => keyof typeof AppTextAlign,
+    default: AppTextAlign.CENTER
+  },
+  fontSize: {
+    type: String as () => keyof typeof AppTextFontSize,
+    default: AppTextFontSize.XL
+  },
+  color: {
+    type: String as () => keyof typeof AppTextColor,
+    default: AppTextColor.DARK
+  },
+  fontWeight: {
+    type: String as () => keyof typeof AppTextFontWeight,
+    default: AppTextFontWeight.MEDIUM
+  },
+})
+
+const alignTextClass = AppTextAlign[props.alignText]
+const fontSizeClass = AppTextFontSize[props.fontSize]
+const colorClass = AppTextColor[props.color]
+const fontWeightClass =  AppTextFontWeight[props.fontWeight]
+
 </script>
 
 <style lang="scss" scoped></style>

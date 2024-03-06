@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="props.to"
-    :class="[alignTextClass, fontSizeClass, colorClass]"
+    :class="[alignTextClass, fontSizeClass, colorClass, fontWeightClass]"
   >
     <slot></slot>
   </router-link>
@@ -23,6 +23,11 @@ enum AppLinkFontSize {
   XS = 'text-xs'
 }
 
+enum AppLinkFontWeight {
+  NORMAL = 'font-normal\t',
+  MEDIUM = 'font-medium\t'
+}
+
 enum AppLinkColor {
   GOLD = 'text-gold',
   MUSTARD = 'text-mustard',
@@ -35,6 +40,7 @@ enum AppLinkColor {
   SMOKE = 'text-smoke',
   ALERT = 'text-alert'
 }
+
 const props = defineProps({
   alignText: {
     type: String as () => keyof typeof AppLinkAlign,
@@ -48,6 +54,10 @@ const props = defineProps({
     type: String as () => keyof typeof AppLinkColor,
     default: AppLinkColor.DARK
   },
+  fontWeight: {
+    type: String as () => keyof typeof AppLinkFontWeight,
+    default: AppLinkFontWeight.MEDIUM
+  },
   to: {
     type: String,
     default: ''
@@ -56,6 +66,7 @@ const props = defineProps({
 const alignTextClass = AppLinkAlign[props.alignText]
 const fontSizeClass = AppLinkFontSize[props.fontSize]
 const colorClass = AppLinkColor[props.color]
+const fontWeightClass =  AppLinkFontWeight[props.fontWeight]
 </script>
 
 <style scoped></style>
