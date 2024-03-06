@@ -1,5 +1,7 @@
 <template>
-  <h1></h1>
+  <h1 :class="[alignTextClass, fontSizeClass, fontWeightClass, colorClass]">
+    <slot></slot>
+  </h1>
 </template>
 
 <script setup lang="ts">
@@ -21,21 +23,43 @@ enum AppTitleColor {
   ALERT = 'text-alert'
 }
 enum AppTitleFontSize {
-  XXL = 'text-5xl',
+  XL5 = 'text-5xl',
+  XL4 = 'text-4xl',
+  XL2 = 'text-2xl',
   XL = 'text-xl',
-  LG = 'text-xl',
   BASE = 'text-base',
-  SM = 'text-sm',
-  XS = 'text-xs'
+  SM = 'text-sm'
+}
+enum AppTitleFontWeight {
+  NORMAL = 'font-normal',
+  MEDIUM = 'font-medium'
 }
 
-interface AppTitleProps {
-  align?: AppTitleAlign
-  color?: AppTitleColor
-  fontSize?: AppTitleFontSize
-}
 
-defineProps<AppTitleProps>()
+
+const props = defineProps({
+  alignText: {
+    type: String as () => keyof typeof AppTitleAlign,
+    default: AppTitleAlign.CENTER
+  },
+  fontSize: {
+    type: String as () => keyof typeof AppTitleFontSize,
+    default: AppTitleFontSize.XL
+  },
+  color: {
+    type: String as () => keyof typeof AppTitleColor,
+    default: AppTitleColor.DARK
+  },
+  fontWeight: {
+    type: String as () => keyof typeof AppTitleFontWeight,
+    default: AppTitleFontWeight.MEDIUM
+  }
+})
+
+const alignTextClass = AppTitleAlign[props.alignText]
+const fontSizeClass = AppTitleFontSize[props.fontSize]
+const colorClass = AppTitleColor[props.color]
+const fontWeightClass = AppTitleFontWeight[props.fontWeight]
 </script>
 
 <style lang="scss" scoped></style>

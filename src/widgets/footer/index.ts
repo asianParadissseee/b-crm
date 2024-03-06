@@ -1,3 +1,3 @@
 import AppFooter from './ui/app-footer.vue'
-
-export { AppFooter }
+import MobileNav from "./ui/mobile-nav.vue"
+export { AppFooter, MobileNav }

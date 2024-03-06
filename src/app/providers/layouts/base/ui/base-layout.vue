@@ -8,9 +8,8 @@
 
 <script setup lang="ts">
 import { AppNavbar, AppNavbarMedia } from '@/widgets/navbar'
-import { AppFooter } from '@/widgets/footer'
+import { AppFooter, MobileNav } from '@/widgets/footer'
 import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
-import MobileNav from '@/shared/ui/mobile-nav.vue'
 
 const { isResponsive } = useWindowSize(1024)
 </script>

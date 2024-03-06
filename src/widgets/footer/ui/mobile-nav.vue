@@ -39,16 +39,29 @@ const navigation = [
     link: '/'
   }
 ]
-
 </script>
 
 <template>
   <footer class="absolute bottom-0 right-0 left-0">
-    <hr class="mb-10 shadow-2xl " />
-    <nav class="flex justify-between px-5 items-center container  w-full mx-auto">
-      <div class="flex flex-col gap-3" v-for="(nav, id) in navigation" :key="id">
-        <img :src="nav.icon" alt="icon of link" width="24" height="24" />
-        <app-text :font-weight="'NORMAL'" :color="'DARK'" :align-text="'CENTER'" :font-size="'XS'">
+    <hr class="mb-10 shadow-2xl" />
+    <nav class="flex justify-between px-5 items-center container w-full mx-auto">
+      <div
+        class="flex flex-col gap-3"
+        v-for="(nav, id) in navigation"
+        :key="id"
+      >
+        <img
+          :src="nav.icon"
+          alt="icon of link"
+          width="24"
+          height="24"
+        />
+        <app-text
+          :font-weight="'NORMAL'"
+          :color="'DARK'"
+          :align-text="'CENTER'"
+          :font-size="'XS'"
+        >
           {{ nav.name }}
         </app-text>
       </div>
@@ -56,6 +69,4 @@ const navigation = [
   </footer>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
