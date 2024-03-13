@@ -1,86 +1,97 @@
 <script setup lang="ts">
-
-import AppText from '@/shared/ui/app-text.vue';
-import ArrowGrayIcon from '@/shared/assets/icons/arrow-gray_icon.svg';
+import AppText from '@/shared/ui/app-text.vue'
+import ArrowGrayIcon from '@/shared/assets/icons/arrow-gray_icon.svg'
 
 const categoryLinks = [
   {
     link: 'Безвоздушные окрасочные аппараты',
-    path: '',
+    path: ''
   },
   {
     link: 'Промышленное окрасочное оборудование',
-    path: '',
+    path: ''
   },
   {
     link: 'Разметочные машины',
-    path: '',
+    path: ''
   },
   {
     link: 'Шлифмашинки',
-    path: '',
+    path: ''
   },
   {
     link: 'Оборудование для штукатурки и шпаклевки',
-    path: '',
+    path: ''
   },
   {
     link: 'Сопутствующие товары',
-    path: '',
-  }
-  , {
+    path: ''
+  },
+  {
     link: 'Комплектующие для окрасочного оборудования',
-    path: '',
+    path: ''
   },
   {
     link: 'Краскопульты',
-    path: '',
-  }
-  , {
+    path: ''
+  },
+  {
     link: 'Сварочное оборудование',
-    path: '',
-  }
-  , {
+    path: ''
+  },
+  {
     link: 'Зарядные устройства',
-    path: '',
-  }
-  , {
+    path: ''
+  },
+  {
     link: 'Индукционные нагреватели',
-    path: '',
-  }
-  , {
+    path: ''
+  },
+  {
     link: 'Инструменты для правки вмятин кузова',
-    path: '',
-  }
-  , {
+    path: ''
+  },
+  {
     link: 'Клепальный инструмент',
-    path: '',
+    path: ''
   },
   {
     link: 'Аксессуары для мастерской',
-    path: '',
-  }
-  , {
-    link: 'Запчасти',
-    path: '',
+    path: ''
   },
-];
-
+  {
+    link: 'Запчасти',
+    path: ''
+  }
+]
 </script>
 
 <template>
-  <aside id="category-sidebar" class="bg-lightAsh w-80 max-w-full">
-    <div class="p-4 flex justify-between items-center" v-for="(link,id) in categoryLinks" :key="id">
-      <app-text>
+  <aside
+    id="category-sidebar"
+    class="bg-lightAsh w-80 max-w-full rounded hidden lg:flex flex-col"
+  >
+    <div
+      class="px-9 py-7 flex justify-between items-center border-b hover:bg-white transition-all cursor-pointer"
+      v-for="(link, id) in categoryLinks"
+      :key="id"
+    >
+      <app-text
+        :align-text="'LEFT'"
+        :font-size="'BASE'"
+      >
         {{ link.link }}
       </app-text>
       <div>
-        <img :src="ArrowGrayIcon" alt="arrow icon" width="5" height="10">
+        <img
+          :src="ArrowGrayIcon"
+          alt="arrow icon"
+          width="5"
+          height="10"
+        />
       </div>
     </div>
   </aside>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

@@ -8,7 +8,5 @@ export enum AppRoutes {
   CATALOG_PRODUCTS = 'catalog-products',
   CONTACTS = 'contacts',
   NEWS = 'news',
-  NOT_FOUND = 'not-found',
+  NOT_FOUND = 'not-found'
 }
-
-

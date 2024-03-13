@@ -1,5 +1,3 @@
-import  CategorySidebar from "./ui/category-sidebar.vue"
+import CategorySidebar from './ui/category-sidebar.vue'
 
-export {
-  CategorySidebar
-}
+export { CategorySidebar }
