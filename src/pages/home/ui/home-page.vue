@@ -1,6 +1,6 @@
 <template>
   <main class="mt-20">
-    <backcall-form/>
+    <backcall-form />
     <div class="container px-5 max-w-9/12 w-full mx-auto flex flex-col lg:grid grid-rows-3 grid-flow-col gap-4">
       <div class="row-span-3">
         <category-sidebar />
@@ -21,7 +21,7 @@
 import { CategorySidebar } from '@/widgets/category-sidebar'
 import { AppSlider } from '@/widgets/slider'
 import { ValuationCards } from '@/widgets/valuation-cards'
-import { BackcallForm } from '@/features/back-call';
+import { BackcallForm } from '@/features/back-call'
 </script>
 
 <style lang="scss" scoped></style>

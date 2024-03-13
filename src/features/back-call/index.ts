@@ -1,5 +1,3 @@
-import BackcallForm from "./ui/backcall-form.vue"
+import BackcallForm from './ui/backcall-form.vue'
 
-export {
-  BackcallForm
-}
+export { BackcallForm }
