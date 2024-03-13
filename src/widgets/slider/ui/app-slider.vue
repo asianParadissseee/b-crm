@@ -6,7 +6,6 @@ import SliderImg from '@/shared/assets/images/slider-img.svg'
 
 SwiperCore.use([Pagination, Navigation])
 
-
 const sliderImages = [
   {
     img: SliderImg
