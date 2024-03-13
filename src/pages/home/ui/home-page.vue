@@ -17,9 +17,9 @@
 </template>
 
 <script lang="ts" setup>
-import { CategorySidebar } from '@/widgets/category-sidebar';
-import { AppSlider } from '@/widgets/slider';
-import { ValuationCards } from '@/widgets/valuation-cards';
+import { CategorySidebar } from '@/widgets/category-sidebar'
+import { AppSlider } from '@/widgets/slider'
+import { ValuationCards } from '@/widgets/valuation-cards'
 </script>
 
 <style lang="scss" scoped></style>

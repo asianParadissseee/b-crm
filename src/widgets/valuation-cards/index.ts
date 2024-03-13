@@ -1,5 +1,3 @@
-import ValuationCards from './ui/valuation-cards.vue';
+import ValuationCards from './ui/valuation-cards.vue'
 
-export {
-  ValuationCards
-}
+export { ValuationCards }
