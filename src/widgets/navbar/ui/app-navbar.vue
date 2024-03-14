@@ -23,6 +23,7 @@
             v-for="(social, id) in socialLinks"
             :key="id"
             class="flex gap-2"
+            @click="social.openModal"
           >
             <img
               class="cursor-pointer"
@@ -129,6 +130,11 @@ import AppLogo from '@/shared/ui/app-logo.vue'
 import AppInput from '@/shared/ui/app-input.vue'
 import AppText from '@/shared/ui/app-text.vue'
 import { handleHref, hrefAttr } from '@/shared/lib/href.ts'
+import { useOpenModal } from '@/app/providers/store'
+
+const isOpenModalStore = useOpenModal()
+
+const { handleShowModal } = isOpenModalStore
 
 const socialLinks = [
   {
@@ -147,10 +153,10 @@ const socialLinks = [
   },
   {
     icon: TelephoneIcon,
-    href: () => handleHref(hrefAttr.TELEPHONE, '+7 (495) 103-48-50'),
     link: 'Обратный звонок',
     width: 16,
-    height: 16
+    height: 16,
+    openModal: handleShowModal
   }
 ]
 
