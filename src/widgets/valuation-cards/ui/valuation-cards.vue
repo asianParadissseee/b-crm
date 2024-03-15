@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-3 gap-5">
+  <div class="grid grid-rows-2 sm:grid-cols-3 gap-5">
     <div
       v-for="(card, id) in cards"
       :key="id"
@@ -8,8 +8,8 @@
         <img
           :src="card.img"
           :alt="card.description"
-          :width="isResponsive ? 312 : 288"
-          :height="isResponsive ? 248 : 160"
+          :width="312"
+          :height="248"
         />
       </div>
       <div
@@ -32,7 +32,7 @@
             >{{ card.description }}
           </app-text>
         </div>
-        <div v-if="!isResponsive">
+        <div>
           <img
             :src="card.icon"
             alt="icon of card"
@@ -54,9 +54,7 @@ import SchaterIcon from '@/shared/assets/icons/schater-sub_icon.svg'
 import YokijiIcon from '@/shared/assets/icons/yokiji-sub_icon.svg'
 import AppTitle from '@/shared/ui/app-title.vue'
 import AppText from '@/shared/ui/app-text.vue'
-import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
 
-const { isResponsive } = useWindowSize(1024)
 
 const cards = [
   {
