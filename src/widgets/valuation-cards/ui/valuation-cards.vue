@@ -55,7 +55,6 @@ import YokijiIcon from '@/shared/assets/icons/yokiji-sub_icon.svg'
 import AppTitle from '@/shared/ui/app-title.vue'
 import AppText from '@/shared/ui/app-text.vue'
 
-
 const cards = [
   {
     img: YokijiImg,
