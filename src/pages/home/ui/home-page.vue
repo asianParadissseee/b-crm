@@ -1,7 +1,6 @@
 <template>
   <main class="mt-20">
     <div class="container px-5 max-w-9/12 w-full mx-auto flex flex-col lg:grid lg:grid-rows-3 lg:grid-cols-3 gap-4">
-      <!-- Changed class to apply grid layout for larger screens -->
       <div class="lg:row-span-3">
         <category-sidebar />
       </div>
