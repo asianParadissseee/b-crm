@@ -1,14 +1,15 @@
 <template>
   <main class="mt-20">
-    <div class="container px-5 max-w-9/12 w-full mx-auto flex flex-col lg:grid grid-rows-3 grid-flow-col gap-4">
-      <div class="row-span-3">
+    <div class="container px-5 max-w-9/12 w-full mx-auto flex flex-col lg:grid lg:grid-rows-3 lg:grid-cols-3 gap-4">
+      <!-- Changed class to apply grid layout for larger screens -->
+      <div class="lg:row-span-3">
         <category-sidebar />
       </div>
-      <div class="col-span-2">
+      <div class="lg:col-span-2">
         <app-slider />
       </div>
-      <div class="row-span-2 col-span-2 mt-14">
-        <div class="flex gap-14 items-center">
+      <div class="lg:row-span-2 lg:col-span-2 mt-14">
+        <div class="flex flex-row lg:gap-14 items-center">
           <valuation-cards />
         </div>
       </div>
