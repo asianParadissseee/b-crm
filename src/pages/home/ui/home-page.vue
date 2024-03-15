@@ -8,7 +8,7 @@
         <app-slider />
       </div>
       <div class="lg:row-span-2 lg:col-span-2 mt-14">
-        <div class="flex flex-row lg:gap-14 items-center">
+        <div class="flex flex-row lg:gap-14 items-center justify-center">
           <valuation-cards />
         </div>
       </div>
