@@ -131,6 +131,7 @@ import AppInput from '@/shared/ui/app-input.vue'
 import AppText from '@/shared/ui/app-text.vue'
 import { handleHref, hrefAttr } from '@/shared/lib/href.ts'
 import { useOpenModal } from '@/app/providers/store'
+import { getRouteArticles, getRouteCatalog, getRouteContacts, getRouteNews } from '@/app/providers/router'
 
 const isOpenModalStore = useOpenModal()
 
@@ -163,31 +164,27 @@ const socialLinks = [
 const routerLinks = [
   {
     name: 'Каталог',
-    path: '/catalog'
-  },
-  {
-    name: 'О компании',
-    path: '/about-company'
+    path: getRouteCatalog()
   },
   {
     name: 'Акции',
-    path: '/stocks'
+    path: ''
   },
   {
     name: 'Статьи',
-    path: '/articles'
+    path: getRouteArticles()
   },
   {
     name: 'Новости',
-    path: '/news'
+    path: getRouteNews()
   },
   {
     name: 'Доставка и оплата',
-    path: '/delivery'
+    path: ''
   },
   {
     name: 'Контакты',
-    path: '/contacts'
+    path: getRouteContacts()
   }
 ]
 </script>

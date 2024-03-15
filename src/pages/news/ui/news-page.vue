@@ -11,6 +11,7 @@ import AppText from '@/shared/ui/app-text.vue'
       <span class="text-dark">Главная страница</span>
       / Каталог
     </app-text>
+    <h1>ССУКККАА</h1>
   </main>
 </template>
 

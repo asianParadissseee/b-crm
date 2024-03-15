@@ -39,7 +39,7 @@ export const routes = [
   },
   {
     path: getRoutePrivateOffice(),
-    name: 'profile',
+    name: 'private-office',
     component: () => import('@/pages/profile')
   },
   {
