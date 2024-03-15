@@ -69,10 +69,10 @@ const categoryLinks = [
 <template>
   <aside
     id="category-sidebar"
-    class="bg-lightAsh w-80 max-w-full rounded hidden lg:flex flex-col"
+    class="bg-lightAsh w-96 max-w-full rounded hidden lg:flex flex-col"
   >
     <div
-      class="px-9 py-3 flex justify-between items-center border-b hover:bg-white transition-all cursor-pointer"
+      class="px-9 py-5 flex justify-between items-center border-b hover:bg-white transition-all cursor-pointer"
       v-for="(link, id) in categoryLinks"
       :key="id"
     >
