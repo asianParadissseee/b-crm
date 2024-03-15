@@ -44,29 +44,29 @@ enum AppLinkColor {
 const props = defineProps({
   alignText: {
     type: String as () => keyof typeof AppLinkAlign,
-    default: AppLinkAlign.CENTER
+    default: AppLinkAlign.CENTER,
   },
   fontSize: {
     type: String as () => keyof typeof AppLinkFontSize,
-    default: AppLinkFontSize.XL
+    default: AppLinkFontSize.XL,
   },
   color: {
     type: String as () => keyof typeof AppLinkColor,
-    default: AppLinkColor.DARK
+    default: AppLinkColor.DARK,
   },
   fontWeight: {
     type: String as () => keyof typeof AppLinkFontWeight,
-    default: AppLinkFontWeight.MEDIUM
+    default: AppLinkFontWeight.MEDIUM,
   },
-  to: {
-    type: String,
-    default: ''
-  }
-})
-const alignTextClass = AppLinkAlign[props.alignText]
-const fontSizeClass = AppLinkFontSize[props.fontSize]
-const colorClass = AppLinkColor[props.color]
-const fontWeightClass = AppLinkFontWeight[props.fontWeight]
+  to:  {
+    type: [String, Object],
+    default: "",
+  },
+});
+const alignTextClass = AppLinkAlign[props.alignText];
+const fontSizeClass = AppLinkFontSize[props.fontSize];
+const colorClass = AppLinkColor[props.color];
+const fontWeightClass = AppLinkFontWeight[props.fontWeight];
 </script>
 
 <style scoped></style>
