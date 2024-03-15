@@ -6,6 +6,7 @@
     >
       <div class="col-span-3 mb-5">
         <img
+          class="rounded"
           :src="card.img"
           :alt="card.description"
           :width="312"
