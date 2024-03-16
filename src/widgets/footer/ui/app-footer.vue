@@ -36,7 +36,10 @@
               v-for="(category, id) in categories"
               :key="id"
             >
-              <app-link :font-size="'BASE'" :to="category.link">
+              <app-link
+                :font-size="'BASE'"
+                :to="category.link"
+              >
                 {{ category.name }}
               </app-link>
             </li>

@@ -1,66 +1,65 @@
 import { HomePage } from '@/pages/home'
+import { RouteRecordRaw } from 'vue-router'
 
 export const getRouteHome = () => '/'
-export const getRouteArticles = () => '/home/articles'
-export const getRouteCardBasket = () => '/home/card-basket'
-export const getRouteCatalog = () => '/home/catalog'
-export const getRouteCatalogProducts = () => '/home/catalog/products'
-export const getRoutePrivateOffice = () => '/home/private-office'
-export const getRouteProfile = () => '/home/private-office/profile'
-export const getRouteNews = () => '/home/news'
-export const getRouteContacts = () => '/home/contacts'
+export const getRouteArticles = () => '/articles'
+export const getRouteCardBasket = () => '/card-basket'
+export const getRouteCatalog = () => '/catalog'
+export const getRouteCatalogProducts = () => '/catalog/products'
+export const getRoutePrivateOffice = () => '/private-office'
+export const getRouteProfile = () => '/private-office/profile'
+export const getRouteNews = () => '/news'
+export const getRouteContacts = () => '/contacts'
 export const getRouteNotFound = () => '/*'
 
-
-
-export const routes = [
+export const routes: RouteRecordRaw[] = [
   {
-    path: "/",
+    path: '/',
     name: 'home',
     component: HomePage
   },
   {
-    path: "/home/articles",
+    path: '/articles',
     name: 'articles',
     component: () => import('@/pages/articles')
   },
   {
-    path: "/home/card-basket",
+    path: '/card-basket',
     name: 'card-basket',
     component: () => import('@/pages/card-basket')
   },
   {
-    path: "/home/catalog",
+    path: '/catalog',
     name: 'catalog',
     component: () => import('@/pages/catalog')
   },
   {
-    path: "/home/catalog/products",
+    path: '/catalog/products',
     name: 'catalog-products',
     component: () => import('@/pages/catalog-products')
   },
   {
-    path: "/home/private-office",
+    path: '/private-office',
     name: 'private-office',
     component: () => import('@/pages/profile')
   },
   {
-    path: "/home/private-office/profile",
+    path: '/private-office/profile',
     name: 'profile',
     component: () => import('@/pages/profile')
   },
   {
-    path: "/*",
+    path: '/*',
     name: 'not-found',
     component: () => import('@/pages/not-found')
   },
   {
-    path: "/home/news",
+    path: '/news',
     name: 'news',
     component: () => import('@/pages/news')
   },
   {
-    path: "/home/contacts",
+    path: '/contacts',
     name: 'contacts',
     component: () => import('@/pages/contacts-page')
   }

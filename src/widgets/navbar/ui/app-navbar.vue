@@ -100,7 +100,7 @@
         class="flex items-center gap-10"
       >
         <app-link
-          :to="{name: link.path}"
+          :to="link.path"
           :color="'DARK'"
           :font-weight="'MEDIUM'"
           :align-text="'CENTER'"
@@ -132,7 +132,7 @@ import AppText from '@/shared/ui/app-text.vue'
 import { handleHref, hrefAttr } from '@/shared/lib/href.ts'
 import { useOpenModal } from '@/app/providers/store'
 import { getRouteArticles, getRouteCatalog, getRouteContacts, getRouteNews } from '@/app/providers/router'
-import { reactive } from 'vue';
+import { reactive } from 'vue'
 
 const isOpenModalStore = useOpenModal()
 

@@ -1,5 +1,6 @@
 <template>
-  <router-link :to="props.to"
+  <router-link
+    :to="props.to"
     :class="[alignTextClass, fontSizeClass, colorClass, fontWeightClass]"
   >
     <slot></slot>
