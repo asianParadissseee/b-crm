@@ -1,6 +1,5 @@
 <template>
-  <router-link
-    :to="props.to"
+  <router-link :to="props.to"
     :class="[alignTextClass, fontSizeClass, colorClass, fontWeightClass]"
   >
     <slot></slot>
@@ -8,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
+
 enum AppLinkAlign {
   RIGHT = 'text-right',
   LEFT = 'text-left',
@@ -60,7 +61,7 @@ const props = defineProps({
   },
   to: {
     type: [String, Object],
-    default: ''
+    required: true
   }
 })
 const alignTextClass = AppLinkAlign[props.alignText]

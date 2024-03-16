@@ -11,54 +11,56 @@ export const getRouteNews = () => '/home/news'
 export const getRouteContacts = () => '/home/contacts'
 export const getRouteNotFound = () => '/*'
 
+
+
 export const routes = [
   {
-    path: getRouteHome(),
+    path: "/",
     name: 'home',
     component: HomePage
   },
   {
-    path: getRouteArticles(),
+    path: "/home/articles",
     name: 'articles',
     component: () => import('@/pages/articles')
   },
   {
-    path: getRouteCardBasket(),
+    path: "/home/card-basket",
     name: 'card-basket',
     component: () => import('@/pages/card-basket')
   },
   {
-    path: getRouteCatalog(),
+    path: "/home/catalog",
     name: 'catalog',
     component: () => import('@/pages/catalog')
   },
   {
-    path: getRouteCatalogProducts(),
+    path: "/home/catalog/products",
     name: 'catalog-products',
     component: () => import('@/pages/catalog-products')
   },
   {
-    path: getRoutePrivateOffice(),
+    path: "/home/private-office",
     name: 'private-office',
     component: () => import('@/pages/profile')
   },
   {
-    path: getRouteProfile(),
+    path: "/home/private-office/profile",
     name: 'profile',
     component: () => import('@/pages/profile')
   },
   {
-    path: getRouteNotFound(),
+    path: "/*",
     name: 'not-found',
     component: () => import('@/pages/not-found')
   },
   {
-    path: getRouteNews(),
+    path: "/home/news",
     name: 'news',
     component: () => import('@/pages/news')
   },
   {
-    path: getRouteContacts(),
+    path: "/home/contacts",
     name: 'contacts',
     component: () => import('@/pages/contacts-page')
   }

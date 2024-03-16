@@ -96,11 +96,11 @@
     <ul class="flex container mx-auto justify-between items-center py-3">
       <li
         v-for="(link, id) in routerLinks"
-        :key="link.path"
+        :key="id"
         class="flex items-center gap-10"
       >
         <app-link
-          :to="link.path"
+          :to="{name: link.path}"
           :color="'DARK'"
           :font-weight="'MEDIUM'"
           :align-text="'CENTER'"
@@ -132,12 +132,13 @@ import AppText from '@/shared/ui/app-text.vue'
 import { handleHref, hrefAttr } from '@/shared/lib/href.ts'
 import { useOpenModal } from '@/app/providers/store'
 import { getRouteArticles, getRouteCatalog, getRouteContacts, getRouteNews } from '@/app/providers/router'
+import { reactive } from 'vue';
 
 const isOpenModalStore = useOpenModal()
 
 const { handleShowModal } = isOpenModalStore
 
-const socialLinks = [
+const socialLinks = reactive([
   {
     icon: WhatsAppIcon,
     href: () => handleHref(hrefAttr.TELEPHONE, '+7 (495) 103-48-50'),
@@ -159,7 +160,7 @@ const socialLinks = [
     height: 16,
     openModal: handleShowModal
   }
-]
+])
 
 const routerLinks = [
   {
