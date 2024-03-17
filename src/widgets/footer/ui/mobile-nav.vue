@@ -42,7 +42,7 @@ const navigation = [
 </script>
 
 <template>
-  <footer class="absolute bottom-0 right-0 left-0 z-50 bg-white">
+  <footer class="sticky bottom-0 right-0 left-0 z-50 bg-white">
     <hr class="mb-10 shadow-2xl" />
     <nav class="flex justify-between px-5 items-center container w-full mx-auto">
       <div
