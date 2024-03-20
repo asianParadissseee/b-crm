@@ -1,6 +1,6 @@
 <template>
-  <section id="about-company">
-    <div class="grid grid-cols-2 gap-10">
+  <section id="about-company" class="mt-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div class="flex flex-col gap-3">
         <AppTitle
           :color="'DARK'"
@@ -59,8 +59,10 @@
             :font-weight="'NORMAL'"
             :color="'DARK'"
           >
-            Конференция по окрасочному оборудованию в Барнауле С 9 <br> по 13 сентября 2019 г. представители компании
-            «Финишинг Групп» <br> проведут конференцию по окрасочному <br> оборудованию в Барнауле, где можно будет...
+            Конференция по окрасочному оборудованию в Барнауле С 9 <br />
+            по 13 сентября 2019 г. представители компании «Финишинг Групп» <br />
+            проведут конференцию по окрасочному <br />
+            оборудованию в Барнауле, где можно будет...
           </AppText>
         </div>
         <div>
@@ -86,7 +88,8 @@
             :font-weight="'NORMAL'"
             :color="'DARK'"
           >
-            23 мая в Минске состоялся образовательный семинар <br> "Механизация ручных процессов", организованный нашим <br>
+            23 мая в Минске состоялся образовательный семинар <br />
+            "Механизация ручных процессов", организованный нашим <br />
             партнерами компаниями Premium Decor и Premium Airless...
           </AppText>
         </div>
@@ -119,8 +122,8 @@
 </template>
 
 <script setup lang="ts">
-import AppTitle from '@/shared/ui/app-title.vue';
-import AppText from '@/shared/ui/app-text.vue';
+import AppTitle from '@/shared/ui/app-title.vue'
+import AppText from '@/shared/ui/app-text.vue'
 </script>
 
 <style scoped></style>

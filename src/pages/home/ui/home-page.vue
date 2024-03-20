@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-20">
+  <main class="my-20">
     <div class="container px-5 max-w-9/12 w-full mx-auto">
       <div class="flex flex-col lg:grid lg:grid-rows-3 lg:grid-cols-3 gap-4">
         <div class="lg:row-span-3">
