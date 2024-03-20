@@ -131,7 +131,6 @@ import AppInput from '@/shared/ui/app-input.vue'
 import AppText from '@/shared/ui/app-text.vue'
 import { handleHref, hrefAttr } from '@/shared/lib/href.ts'
 import { useOpenModal } from '@/app/providers/store'
-import { getRouteArticles, getRouteCatalog, getRouteContacts, getRouteNews } from '@/app/providers/router'
 import { reactive } from 'vue'
 
 const isOpenModalStore = useOpenModal()
@@ -165,7 +164,7 @@ const socialLinks = reactive([
 const routerLinks = [
   {
     name: 'Каталог',
-    path: getRouteCatalog()
+    path: ''
   },
   {
     name: 'Акции',
@@ -173,11 +172,11 @@ const routerLinks = [
   },
   {
     name: 'Статьи',
-    path: getRouteArticles()
+    path: ''
   },
   {
     name: 'Новости',
-    path: getRouteNews()
+    path: ''
   },
   {
     name: 'Доставка и оплата',
@@ -185,7 +184,7 @@ const routerLinks = [
   },
   {
     name: 'Контакты',
-    path: getRouteContacts()
+    path: ''
   }
 ]
 </script>

@@ -1,5 +1,8 @@
 <template>
-  <section id="about-company" class="mt-20">
+  <section
+    id="about-company"
+    class="mt-20"
+  >
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div class="flex flex-col gap-3">
         <AppTitle
