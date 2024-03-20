@@ -1,7 +1,7 @@
 <template>
   <main class="mt-20">
     <div class="container px-5 max-w-9/12 w-full mx-auto">
-      <div class=" flex flex-col lg:grid lg:grid-rows-3 lg:grid-cols-3 gap-4">
+      <div class="flex flex-col lg:grid lg:grid-rows-3 lg:grid-cols-3 gap-4">
         <div class="lg:row-span-3">
           <category-sidebar />
         </div>
@@ -20,10 +20,10 @@
 </template>
 
 <script lang="ts" setup>
-import { CategorySidebar } from '@/widgets/category-sidebar';
-import { AppSlider } from '@/widgets/slider';
-import { ValuationCards } from '@/widgets/home/valuation-cards';
-import { AboutCompany } from '@/widgets/home/about-company';
+import { CategorySidebar } from '@/widgets/category-sidebar'
+import { AppSlider } from '@/widgets/slider'
+import { ValuationCards } from '@/widgets/home/valuation-cards'
+import { AboutCompany } from '@/widgets/home/about-company'
 </script>
 
 <style lang="scss" scoped></style>
