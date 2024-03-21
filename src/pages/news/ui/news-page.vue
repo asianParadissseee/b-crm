@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
+import { NewsList } from '@/widgets/news/news-list'
 </script>
 
 <template>
@@ -22,6 +23,7 @@ import AppTitle from '@/shared/ui/app-title.vue'
           НОВОСТИ
         </app-title>
       </div>
+      <news-list :news-list="[]" />
     </div>
   </main>
 </template>
