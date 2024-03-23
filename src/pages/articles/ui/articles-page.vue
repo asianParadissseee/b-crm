@@ -1,7 +1,11 @@
 <template>
-  <div>Статьи</div>
+  <div>
+    <articles-list/>
+  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ArticlesList } from '@/widgets/articles/articles-list'
+</script>
 
 <style lang="scss" scoped></style>
