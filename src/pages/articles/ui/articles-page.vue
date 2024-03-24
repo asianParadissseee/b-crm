@@ -1,6 +1,6 @@
 <template>
   <div>
-    <articles-list/>
+    <articles-list />
   </div>
 </template>
 

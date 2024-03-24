@@ -1,5 +1,3 @@
-import Articles from "./ui/articles.vue"
+import Articles from './ui/articles.vue'
 
-export {
-  Articles
-}
+export { Articles }

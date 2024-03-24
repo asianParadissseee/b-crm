@@ -1,2 +1,2 @@
-import ArticlesList from "./ui/articles-list.vue"
-export {ArticlesList}
+import ArticlesList from './ui/articles-list.vue'
+export { ArticlesList }
