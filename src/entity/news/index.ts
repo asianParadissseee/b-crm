@@ -1,6 +1,7 @@
 import News from './ui/news.vue'
-// import {} from "./models/api/news.api.ts"
+import { useFetchNews } from './models/api/news.api.ts'
 import { NewsDto, NewsSchema, NewsResponse } from './models/types/news.schema.ts'
-// import {} from "./models/store/news.store.ts"
-export { News }
+import { useNewsState } from './models/store/news.store.ts'
+
+export { News, useNewsState, useFetchNews }
 export type { NewsDto, NewsSchema, NewsResponse }

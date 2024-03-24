@@ -5,8 +5,8 @@ import { http } from '@/shared/api/axios.ts'
 
 export const useNewsState = defineStore('news-store', () => {
   const news = reactive<NewsResponse[]>([])
-  async function getNewsRequest() {
-    return (await http.get(`/news`)).data
+  async function getNewsRequest(): Promise<NewsResponse[]> {
+    return (await http.get<NewsResponse[]>(`/news`)).data
   }
   return {
     news,

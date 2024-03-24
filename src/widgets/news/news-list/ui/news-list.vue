@@ -3,7 +3,7 @@ import { News, NewsResponse } from '@/entity/news'
 import AppTitle from '@/shared/ui/app-title.vue'
 
 interface NewsListProps {
-  newsList: NewsResponse[]
+  newsData: NewsResponse[]
 }
 
 const props = defineProps<NewsListProps>()
@@ -12,19 +12,20 @@ const props = defineProps<NewsListProps>()
 <template>
   <section
     id="news-list"
-    class="my-10"
+    class="my-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
   >
     <News
-      :id="news.id"
       :title="news.title"
       :background-image="news.backgroundImage"
       :description="news.description"
-      v-if="!props.newsList?.length"
+      v-if="props.newsData?.length"
       :create-at="news.createAt"
-      v-for="news in props.newsList"
-      :key="news.id"
+      v-for="news in props.newsData"
+      :key="news._id"
+      :_id="news._id"
     />
     <app-title
+      v-else
       :font-size="'XL4'"
       :font-weight="'MEDIUM'"
       :color="'DARK'"

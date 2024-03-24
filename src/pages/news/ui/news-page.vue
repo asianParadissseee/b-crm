@@ -2,11 +2,14 @@
 import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 import { NewsList } from '@/widgets/news/news-list'
+import { useFetchNews } from '@/entity/news'
+
+const { data, isLoading, error } = useFetchNews()
 </script>
 
 <template>
   <main>
-    <div class="container mx-auto px-5">
+    <div class="container mx-auto px-5 min-h-svh">
       <div class="flex flex-col gap-y-9 my-5">
         <app-text
           :align-text="'LEFT'"
@@ -23,7 +26,12 @@ import { NewsList } from '@/widgets/news/news-list'
           НОВОСТИ
         </app-title>
       </div>
-      <news-list :news-list="[]" />
+      <div v-if="isLoading">Загрузка</div>
+      <div v-else-if="error">Ошибка загрузки новостей {{ error.message }}</div>
+      <news-list
+        :news-data="data || []"
+        v-else
+      />
     </div>
   </main>
 </template>
