@@ -1,6 +1,7 @@
 import { HomePage } from '@/pages/home'
 import { NewsPage } from '@/pages/news'
 import { ArticlesPage } from '@/pages/articles'
+import { NotFound } from '@/pages/not-found'
 
 export const routes = [
   {
@@ -17,5 +18,10 @@ export const routes = [
     path: '/articles',
     name: 'articles',
     component: ArticlesPage
+  },
+  {
+    path: "/*",
+    name: "not-found",
+    component: NotFound
   }
 ]
