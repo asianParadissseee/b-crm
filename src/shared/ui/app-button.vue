@@ -62,7 +62,12 @@ const buttonAlignClass = AppButtonAlign[props.align]
     ]"
   >
     <slot v-if="!props.isIcon"></slot>
-    <img v-else :src="props.src" alt="иконка для кнопки" class="p-3">
+    <img
+      v-else
+      :src="props.src"
+      alt="иконка для кнопки"
+      class="p-3"
+    />
   </button>
 </template>
 

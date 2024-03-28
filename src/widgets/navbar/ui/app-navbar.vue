@@ -161,7 +161,7 @@ const socialLinks = reactive([
   }
 ])
 
-const routerLinks = [
+const routerLinks = reactive([
   {
     name: 'Каталог',
     path: ''
@@ -176,7 +176,7 @@ const routerLinks = [
   },
   {
     name: 'Новости',
-    path: ''
+    path: '/news'
   },
   {
     name: 'Доставка и оплата',
@@ -186,7 +186,7 @@ const routerLinks = [
     name: 'Контакты',
     path: ''
   }
-]
+])
 </script>
 
 <style lang="scss" scoped></style>
