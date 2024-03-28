@@ -2,6 +2,8 @@ import { HomePage } from '@/pages/home'
 import { NewsPage } from '@/pages/news'
 import { ArticlesPage } from '@/pages/articles'
 import { NotFound } from '@/pages/not-found'
+import { AuthPage } from '@/pages/auth'
+import { RegistrationPage } from '@/pages/registration'
 
 export const routes = [
   {
@@ -18,6 +20,16 @@ export const routes = [
     path: '/articles',
     name: 'articles',
     component: ArticlesPage
+  },
+  {
+    path: '/auth',
+    name: 'auth',
+    component: AuthPage
+  },
+  {
+    path: '/registration',
+    name: 'registration',
+    component: RegistrationPage
   },
   {
     path: '/*',
