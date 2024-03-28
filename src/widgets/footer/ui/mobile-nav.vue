@@ -6,15 +6,18 @@ import CardShopIcon from '@/shared/assets/icons/card-shop-orange_small.svg'
 import UserIcon from '@/shared/assets/icons/user-large.svg'
 import MenuIcon from '@/shared/assets/icons/menu.svg'
 import AppText from '@/shared/ui/app-text.vue'
+import { reactive } from 'vue'
+import { useRouter } from 'vue-router'
 
-const navigation = [
+const router = useRouter()
+const navigation = reactive([
   {
-    icon: CatalogOrangeIcon,
+    icon: HomeOrangeIcon,
     name: 'Домой',
     link: '/'
   },
   {
-    icon: HomeOrangeIcon,
+    icon: CatalogOrangeIcon,
     name: 'Каталог',
     link: '/catalog'
   },
@@ -38,7 +41,7 @@ const navigation = [
     name: 'Еще',
     link: '/'
   }
-]
+])
 </script>
 
 <template>
@@ -49,6 +52,7 @@ const navigation = [
         class="flex flex-col gap-3"
         v-for="(nav, id) in navigation"
         :key="id"
+        @click="router.push(nav.link)"
       >
         <img
           :src="nav.icon"

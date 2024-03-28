@@ -172,7 +172,7 @@ const routerLinks = reactive([
   },
   {
     name: 'Статьи',
-    path: ''
+    path: '/articles'
   },
   {
     name: 'Новости',
