@@ -20,8 +20,8 @@ export const routes = [
     component: ArticlesPage
   },
   {
-    path: "/*",
-    name: "not-found",
+    path: '/*',
+    name: 'not-found',
     component: NotFound
   }
 ]
