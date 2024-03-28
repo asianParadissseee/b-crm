@@ -29,6 +29,14 @@ const props = defineProps({
   align: {
     type: String as () => keyof typeof AppButtonAlign,
     default: AppButtonAlign.CENTER
+  },
+  isIcon: {
+    type: Boolean,
+    default: false
+  },
+  src: {
+    type: String,
+    default: ''
   }
 })
 const buttonColorClass = AppButtonColor[props.color]
@@ -41,7 +49,7 @@ const buttonAlignClass = AppButtonAlign[props.align]
     :class="[
       'text-dark',
       'text-center',
-      'h-14',
+      'min-h-14',
       'hover:shadow-2xl',
       'hover:border-transparent',
       'hover:shadow-gold',
@@ -53,7 +61,8 @@ const buttonAlignClass = AppButtonAlign[props.align]
       buttonSizeClass
     ]"
   >
-    <slot></slot>
+    <slot v-if="!props.isIcon"></slot>
+    <img v-else :src="props.src" alt="иконка для кнопки" class="p-3">
   </button>
 </template>
 
