@@ -1,5 +1,3 @@
-import AuthPage from "./ui/auth-page.vue"
+import AuthPage from './ui/auth-page.vue'
 
-export {
-  AuthPage
-}
+export { AuthPage }

@@ -11,13 +11,12 @@ export const useAuthStore = defineStore('auth', () => {
     phoneNumber: ''
   })
 
-  async function getAuthDto(values: AuthDto): Promise<AuthResponse>{
-    return (await http.post("/auth", values)).data
+  async function getAuthDto(values: AuthDto): Promise<AuthResponse> {
+    return (await http.post('/auth', values)).data
   }
 
   return {
     authData,
     getAuthDto
   }
-
 })
