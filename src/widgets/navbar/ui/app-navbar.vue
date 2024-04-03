@@ -193,7 +193,7 @@ const routerLinks = reactive([
   },
   {
     name: 'Контакты',
-    path: ''
+    path: '/contacts'
   }
 ])
 </script>

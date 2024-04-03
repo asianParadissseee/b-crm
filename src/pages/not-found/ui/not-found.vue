@@ -2,7 +2,7 @@
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
 import { computed } from 'vue'
 
-const title = computed(()=>"Страница не найдена")
+const title = computed(() => 'Страница не найдена')
 
 useTitle(title.value)
 </script>

@@ -4,6 +4,7 @@ import { ArticlesPage } from '@/pages/articles'
 import { NotFound } from '@/pages/not-found'
 import { AuthPage } from '@/pages/auth'
 import { RegistrationPage } from '@/pages/registration'
+import { ContactsPage } from '@/pages/contacts-page'
 
 export const routes = [
   {
@@ -35,5 +36,10 @@ export const routes = [
     path: '/*',
     name: 'not-found',
     component: NotFound
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    component: ContactsPage
   }
 ]
