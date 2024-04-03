@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
+import { computed } from 'vue'
 
-useTitle('Страница не найдена')
+const title = computed(()=>"Страница не найдена")
+
+useTitle(title.value)
 </script>
 
 <template>
