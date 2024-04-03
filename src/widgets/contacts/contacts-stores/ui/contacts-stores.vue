@@ -9,7 +9,7 @@ import AppTitle from '@/shared/ui/app-title.vue'
       :font-weight="'MEDIUM'"
       :align-text="'LEFT'"
     >
-      центральный офис
+      магазин
     </app-title>
   </div>
 </template>

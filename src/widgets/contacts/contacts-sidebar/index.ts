@@ -1,2 +1,3 @@
 import ContactsSidebar from './ui/contacts-sidebar.vue'
-export { ContactsSidebar }
+import { useCurrentPageStore } from './models/store/current-page.store.ts'
+export { ContactsSidebar, useCurrentPageStore }
