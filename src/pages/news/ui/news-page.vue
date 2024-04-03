@@ -3,8 +3,11 @@ import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 import { NewsList } from '@/widgets/news/news-list'
 import { useFetchNews } from '@/entity/news'
+import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 const { data, isLoading, error } = useFetchNews()
+useTitle('Новости')
+
 </script>
 
 <template>

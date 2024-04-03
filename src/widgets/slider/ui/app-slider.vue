@@ -47,5 +47,3 @@ const autoplay = {
     </swiper-slide>
   </swiper>
 </template>
-
-

@@ -1,5 +1,5 @@
 export interface BackCallResponse {
-   message: string
+  message: string
 }
 
 export interface BackCallDto {
