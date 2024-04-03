@@ -5,8 +5,20 @@ import AppText from '@/shared/ui/app-text.vue'
 import AppInput from '@/shared/ui/app-input.vue'
 import AppButton from '@/shared/ui/app-button.vue'
 import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
+import { useBackcallStore } from '../models/store/backcall.store.ts'
+import { storeToRefs } from 'pinia'
 
 const { isResponsive } = useWindowSize(1024)
+
+const store = useBackcallStore()
+const { backCallState } = storeToRefs(store)
+const { getBackCallDto } = useBackcallStore()
+
+const handleSubmitData = async (e: Event) => {
+  e.preventDefault()
+  await getBackCallDto(backCallState.value.dto)
+}
+
 </script>
 
 <template>
@@ -24,10 +36,10 @@ const { isResponsive } = useWindowSize(1024)
         :align-text="'CENTER'"
         :font-size="'XS'"
         :color="'SMOKE'"
-        >Оставьте свои контакты и наш менеджер свяжется с вами ближайшее время
+      >Оставьте свои контакты и наш менеджер свяжется с вами ближайшее время
       </app-text>
     </div>
-    <form class="flex flex-col gap-7 my-5">
+    <form class="flex flex-col gap-7 my-5" @submit="handleSubmitData">
       <app-input
         :placeholder="'Введите имя'"
         :size="'DESKTOP'"
@@ -42,7 +54,8 @@ const { isResponsive } = useWindowSize(1024)
           :size="'LARGE'"
           :color="'PRIMARY'"
         >
-          заказать обратный звонок</app-button
+          заказать обратный звонок
+        </app-button
         >
       </div>
     </form>

@@ -34,7 +34,7 @@ onUnmounted(() => {
       tabindex="-1"
       class="fixed top-0 right-0 left-0 z-50 w-screen h-screen flex justify-center items-center bg-black bg-opacity-60"
     >
-      <div class="w-1/3 min-h-96 bg-white rounded-2xl p-10 relative">
+      <div class="w-1/3  min-h-96 bg-white rounded-2xl p-10 relative">
         <div
           class="top-3 right-10 absolute text-smoke cursor-pointer"
           @click="handleShowModal"
