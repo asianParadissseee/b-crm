@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useOpenModal } from '@/app/providers/store'
 import { storeToRefs } from 'pinia'
-import {  onUnmounted, watch } from 'vue'
+import { onUnmounted, watch } from 'vue'
 
 const isOpenModalStore = useOpenModal()
 const { handleShowModal } = isOpenModalStore
