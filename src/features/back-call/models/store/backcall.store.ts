@@ -8,7 +8,9 @@ export const useBackcallStore = defineStore('back-call', () => {
       fullName: '',
       phoneNumber: ''
     },
-    response: {},
+    response: {
+      message: ''
+    },
     error: '',
     isError: false,
     isLoading: true
@@ -21,13 +23,15 @@ export const useBackcallStore = defineStore('back-call', () => {
       const res = await http.post('/application', dto)
       if (!res.data) {
         throw new Error('Ошибка отправки данных с заявки на обратный звонок')
-        backCallState.response = res.data
       }
+      backCallState.response.message = res.data
+      return res.data
     } catch (e) {
       backCallState.isError = true
       backCallState.error = '' + e || 'Ошибка отправки заявки на звонок'
     }
   }
+
   return {
     getBackCallDto,
     backCallState

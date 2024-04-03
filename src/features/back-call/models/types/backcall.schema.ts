@@ -1,4 +1,6 @@
-export interface BackCallResponse {}
+export interface BackCallResponse {
+   message: string
+}
 
 export interface BackCallDto {
   fullName: string

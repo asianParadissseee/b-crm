@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import SwiperCore from 'swiper/core'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import SliderImg from '@/shared/assets/images/slider-img.svg'
 
-SwiperCore.use([Pagination, Navigation])
+SwiperCore.use([Pagination, Navigation, Autoplay])
 
 const sliderImages = [
   {
@@ -19,7 +19,6 @@ const autoplay = {
 
 <template>
   <swiper
-    :navigation="true"
     class="mySwiper"
     :autoplay="autoplay"
     :loop="true"
@@ -49,4 +48,4 @@ const autoplay = {
   </swiper>
 </template>
 
-<style scoped lang="scss"></style>
+
