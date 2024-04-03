@@ -137,7 +137,16 @@ const isOpenModalStore = useOpenModal()
 
 const { handleShowModal } = isOpenModalStore
 
-const socialLinks = reactive([
+interface ISocialLink {
+  icon: string
+  href?: () => void
+  link: string
+  width: number
+  height: number
+  openModal?: () => void
+}
+
+const socialLinks = reactive<ISocialLink[]>([
   {
     icon: WhatsAppIcon,
     href: () => handleHref(hrefAttr.TELEPHONE, '+7 (495) 103-48-50'),

@@ -4,17 +4,21 @@ import AppTitle from '@/shared/ui/app-title.vue'
 import AppText from '@/shared/ui/app-text.vue'
 import AppInput from '@/shared/ui/app-input.vue'
 import AppButton from '@/shared/ui/app-button.vue'
+import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
+
+const { isResponsive } = useWindowSize(1024)
 </script>
 
 <template>
   <app-modal>
     <div class="flex flex-col gap-5">
       <app-title
-        :font-size="'XL4'"
+        :font-size="isResponsive ? 'XL2' : 'XL4'"
         :align-text="'CENTER'"
         :font-weight="'MEDIUM'"
-        >ОБРАТНЫЙ ЗВОНОК</app-title
       >
+        ОБРАТНЫЙ ЗВОНОК
+      </app-title>
       <app-text
         :font-weight="'NORMAL'"
         :align-text="'CENTER'"
@@ -32,7 +36,15 @@ import AppButton from '@/shared/ui/app-button.vue'
         :placeholder="'Введите телефон *'"
         :size="'DESKTOP'"
       />
-      <app-button> заказать обратный звонок </app-button>
+      <div class="flex justify-center items-center">
+        <app-button
+          :align="'CENTER'"
+          :size="'LARGE'"
+          :color="'PRIMARY'"
+        >
+          заказать обратный звонок</app-button
+        >
+      </div>
     </form>
     <app-text
       :font-size="'XS'"
