@@ -2,7 +2,6 @@
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 useTitle('Страница не найдена')
-
 </script>
 
 <template>

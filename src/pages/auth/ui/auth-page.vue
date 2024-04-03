@@ -3,7 +3,6 @@ import { AuthForm } from '@/features/auth'
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 useTitle('Авторизация')
-
 </script>
 
 <template>

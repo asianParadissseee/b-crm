@@ -2,7 +2,6 @@
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 useTitle('Регистрация')
-
 </script>
 
 <template></template>

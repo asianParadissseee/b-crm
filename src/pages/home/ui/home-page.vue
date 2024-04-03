@@ -27,7 +27,6 @@ import { AboutCompany } from '@/widgets/home/about-company'
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 useTitle('СпецОкраска')
-
 </script>
 
 <style lang="scss" scoped></style>

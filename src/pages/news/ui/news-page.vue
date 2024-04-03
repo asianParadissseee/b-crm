@@ -7,7 +7,6 @@ import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 const { data, isLoading, error } = useFetchNews()
 useTitle('Новости')
-
 </script>
 
 <template>
