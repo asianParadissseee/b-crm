@@ -22,7 +22,7 @@ useTitle('Контакты')
 </script>
 
 <template>
-  <main>
+  <main class="my-20 min-h-svh">
     <div class="container px-5 max-w-9/12 w-full mx-auto my-10">
       <div class="flex flex-col gap-3 mb-5">
         <app-text

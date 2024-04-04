@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <main class="my-20 min-h-svh">
     <articles-list />
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>

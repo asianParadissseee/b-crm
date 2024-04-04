@@ -6,7 +6,7 @@ useTitle('Авторизация')
 </script>
 
 <template>
-  <main>
+  <main class="my-20 min-h-svh">
     <div class="container mx-auto px-5 max-w-9/12 w-full">
       <auth-form />
     </div>

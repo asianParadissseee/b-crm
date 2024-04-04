@@ -10,7 +10,7 @@ useTitle('Новости')
 </script>
 
 <template>
-  <main>
+  <main class="my-20 min-h-svh">
     <div class="container mx-auto px-5 min-h-svh">
       <div class="flex flex-col gap-y-9 my-5">
         <app-text

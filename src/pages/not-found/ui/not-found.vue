@@ -8,7 +8,9 @@ useTitle(title.value)
 </script>
 
 <template>
-  <h1>404</h1>
+  <main class="my-20 min-h-svh">
+    <h1>404</h1>
+  </main>
 </template>
 
 <style scoped lang="scss"></style>
