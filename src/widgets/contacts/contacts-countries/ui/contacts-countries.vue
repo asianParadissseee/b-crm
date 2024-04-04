@@ -2,7 +2,8 @@
 import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 import GeoIcon from '@/shared/assets/icons/orange-geo.svg'
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
+import AppMap from '@/shared/ui/app-map.vue'
 
 interface IShop {
   name: string
@@ -113,28 +114,7 @@ const dealerBlocks = reactive<IDealerBlock[]>([
   }
 ])
 
-const center = ref([40, 40])
-const projection = ref('EPSG:4326')
-const zoom = ref(14)
-const rotation = ref(0)
 
-const currentCenter = ref(center.value)
-const currentZoom = ref(zoom.value)
-const currentRotation = ref(rotation.value)
-const currentResolution = ref(0)
-
-function resolutionChanged(event: any) {
-  currentResolution.value = event.target.getResolution()
-  currentZoom.value = event.target.getZoom()
-}
-
-function centerChanged(event: any) {
-  currentCenter.value = event.target.getCenter()
-}
-
-function rotationChanged(event: any) {
-  currentRotation.value = event.target.getRotation()
-}
 </script>
 
 <template>
@@ -146,25 +126,7 @@ function rotationChanged(event: any) {
     >
       дилеры других стран
     </app-title>
-    <section class="h-96 my-10">
-      <ol-map style="height: 400px">
-        <ol-view
-          ref="view"
-          :center="center"
-          :rotation="rotation"
-          :zoom="zoom"
-          :projection="projection"
-          @change:center="centerChanged"
-          @change:resolution="resolutionChanged"
-          @change:rotation="rotationChanged"
-        />
-
-        <ol-tile-layer>
-          <ol-source-osm />
-        </ol-tile-layer>
-        <ol-rotate-control></ol-rotate-control>
-      </ol-map>
-    </section>
+    <app-map />
     <section class="grid-cols-1 grid">
       <div
         class=""

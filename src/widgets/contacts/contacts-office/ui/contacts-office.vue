@@ -7,8 +7,8 @@ import EmailIcon from '@/shared/assets/icons/email.svg'
 import TimeIcon from '@/shared/assets/icons/time-orange_icon.svg'
 import CursorIcon from '@/shared/assets/icons/cursor-orage_icon.svg'
 import { handleHref } from '@/shared/lib/href.ts'
-import { reactive, ref } from 'vue'
-
+import { reactive } from 'vue'
+import MapImage from "@/shared/assets/images/map.svg"
 interface IBlock {
   title: string
   subTitle?: string
@@ -89,26 +89,7 @@ const requisites = reactive<IRequisite[]>([
   }
 ])
 
-const center = ref([40, 40])
-const projection = ref('EPSG:4326')
-const zoom = ref(14)
-const rotation = ref(0)
 
-const currentCenter = ref(center.value)
-const currentZoom = ref(zoom.value)
-const currentRotation = ref(rotation.value)
-const currentResolution = ref(0)
-
-function resolutionChanged(event: any) {
-  currentResolution.value = event.target.getResolution()
-  currentZoom.value = event.target.getZoom()
-}
-function centerChanged(event: any) {
-  currentCenter.value = event.target.getCenter()
-}
-function rotationChanged(event: any) {
-  currentRotation.value = event.target.getRotation()
-}
 </script>
 
 <template>
@@ -120,26 +101,9 @@ function rotationChanged(event: any) {
     >
       центральный офис
     </app-title>
-    <section class="h-96 my-10">
-      <ol-map style="height: 400px">
-        <ol-view
-          ref="view"
-          :center="center"
-          :rotation="rotation"
-          :zoom="zoom"
-          :projection="projection"
-          @change:center="centerChanged"
-          @change:resolution="resolutionChanged"
-          @change:rotation="rotationChanged"
-        />
-
-        <ol-tile-layer>
-          <ol-source-osm />
-        </ol-tile-layer>
-
-        <ol-rotate-control></ol-rotate-control>
-      </ol-map>
-    </section>
+    <div>
+      <img :src="MapImage" alt="карта Москвы" :width="984" :height="330">
+    </div>
     <section
       class="py-3 px-6 shadow-xl w-full grid grid-cols-1 gap-10 md:place-items-start place-items-center md:grid-cols-3 rounded-xl"
     >
@@ -188,7 +152,7 @@ function rotationChanged(event: any) {
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-              >+7 (495) 103-48-50
+            >+7 (495) 103-48-50
             </app-text>
             <app-text
               @click="handleHref('tel', '+7 (495) 103-74-75')"
@@ -196,7 +160,7 @@ function rotationChanged(event: any) {
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-              >+7 (495) 103-74-75
+            >+7 (495) 103-74-75
             </app-text>
           </div>
         </div>

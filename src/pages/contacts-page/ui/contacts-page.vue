@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+import { storeToRefs } from 'pinia'
 import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 import { ContactsSidebar, useCurrentPageStore } from '@/widgets/contacts/contacts-sidebar'
@@ -6,9 +8,7 @@ import { ContactsStores } from '@/widgets/contacts/contacts-stores'
 import { ContactsOffice } from '@/widgets/contacts/contacts-office'
 import { ContactsCountries } from '@/widgets/contacts/contacts-countries'
 import { ContactsService } from '@/widgets/contacts/contacts-service'
-import { storeToRefs } from 'pinia'
 import { useTitle } from '@/shared/lib/composables/use-title.ts'
-import { useRouter } from 'vue-router'
 
 const store = useCurrentPageStore()
 

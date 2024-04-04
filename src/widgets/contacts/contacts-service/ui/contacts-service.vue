@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { reactive } from 'vue'
 import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 import GeoIcon from '@/shared/assets/icons/orange-geo.svg'
-import { reactive, ref } from 'vue'
 import OrangeGeoIcon from '@/shared/assets/icons/orange-geo.svg'
 import TelephoneIcon from '@/shared/assets/icons/telephone-icon.svg'
 import { handleHref } from '@/shared/lib/href.ts'
@@ -12,6 +12,8 @@ import CursorIcon from '@/shared/assets/icons/cursor-orage_icon.svg'
 import CursorBorderIcon from '@/shared/assets/icons/cursor-border_icon.svg'
 import AppButton from '@/shared/ui/app-button.vue'
 import TelegramIcon from '@/shared/assets/icons/telegram-icon.svg'
+import AppMap from '@/shared/ui/app-map.vue'
+
 interface IShop {
   name: string
   address: string
@@ -121,28 +123,7 @@ const dealerBlocks = reactive<IDealerBlock[]>([
   }
 ])
 
-const center = ref([40, 40])
-const projection = ref('EPSG:4326')
-const zoom = ref(14)
-const rotation = ref(0)
 
-const currentCenter = ref(center.value)
-const currentZoom = ref(zoom.value)
-const currentRotation = ref(rotation.value)
-const currentResolution = ref(0)
-
-function resolutionChanged(event: any) {
-  currentResolution.value = event.target.getResolution()
-  currentZoom.value = event.target.getZoom()
-}
-
-function centerChanged(event: any) {
-  currentCenter.value = event.target.getCenter()
-}
-
-function rotationChanged(event: any) {
-  currentRotation.value = event.target.getRotation()
-}
 </script>
 
 <template>
@@ -154,25 +135,7 @@ function rotationChanged(event: any) {
     >
       сервисные центры
     </app-title>
-    <section class="h-96 my-10">
-      <ol-map style="height: 400px">
-        <ol-view
-          ref="view"
-          :center="center"
-          :rotation="rotation"
-          :zoom="zoom"
-          :projection="projection"
-          @change:center="centerChanged"
-          @change:resolution="resolutionChanged"
-          @change:rotation="rotationChanged"
-        />
-
-        <ol-tile-layer>
-          <ol-source-osm />
-        </ol-tile-layer>
-        <ol-rotate-control></ol-rotate-control>
-      </ol-map>
-    </section>
+    <app-map />
     <section
       class="py-3 px-6 shadow-xl my-10 w-full grid grid-cols-1 gap-10 md:place-items-start place-items-center md:grid-cols-3 rounded-xl"
     >
@@ -221,7 +184,7 @@ function rotationChanged(event: any) {
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-              >+7 (495) 103-48-50
+            >+7 (495) 103-48-50
             </app-text>
             <app-text
               @click="handleHref('tel', '+7 (495) 103-74-75')"
@@ -229,7 +192,7 @@ function rotationChanged(event: any) {
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-              >+7 (495) 103-74-75
+            >+7 (495) 103-74-75
             </app-text>
           </div>
         </div>
