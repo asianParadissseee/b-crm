@@ -1,5 +1,10 @@
 <template>
-  <router-view></router-view>
+  <suspense>
+    <template #default>
+      <router-view></router-view>
+    </template>
+    <template #fallback> Загрузка страницы </template>
+  </suspense>
 </template>
 
 <script>

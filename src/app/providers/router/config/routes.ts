@@ -1,45 +1,37 @@
-import { HomePage } from '@/pages/home'
-import { NewsPage } from '@/pages/news'
-import { ArticlesPage } from '@/pages/articles'
-import { NotFound } from '@/pages/not-found'
-import { AuthPage } from '@/pages/auth'
-import { RegistrationPage } from '@/pages/registration'
-import { ContactsPage } from '@/pages/contacts-page'
-
 export const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomePage
+    component: import('@/pages/home/ui/home-page.vue')
   },
   {
     path: '/news',
     name: 'news',
-    component: NewsPage
+    component: () => import('@/pages/news/ui/news-page.vue')
   },
   {
     path: '/articles',
     name: 'articles',
-    component: ArticlesPage
+    component: () => import('@/pages/articles/ui/articles-page.vue')
   },
   {
     path: '/auth',
     name: 'auth',
-    component: AuthPage
+    component: () => import('@/pages/auth/ui/auth-page.vue')
   },
   {
     path: '/registration',
     name: 'registration',
-    component: RegistrationPage
+    component: () => import('@/pages/registration/ui/registration-page.vue')
   },
   {
     path: '/*',
     name: 'not-found',
-    component: NotFound
+    component: () => import('@/pages/not-found/ui/not-found.vue')
   },
   {
     path: '/contacts',
     name: 'contacts',
-    component: ContactsPage
+    component: () => import('@/pages/contacts-page/ui/contacts-page.vue')
   }
 ]
