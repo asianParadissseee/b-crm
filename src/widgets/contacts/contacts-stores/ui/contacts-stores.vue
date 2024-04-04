@@ -7,7 +7,7 @@ import EmailIcon from '@/shared/assets/icons/email.svg'
 import TimeIcon from '@/shared/assets/icons/time-orange_icon.svg'
 import CursorIcon from '@/shared/assets/icons/cursor-orage_icon.svg'
 import { handleHref } from '@/shared/lib/href.ts'
-import { reactive} from 'vue'
+import { reactive } from 'vue'
 import AppMap from '@/shared/ui/app-map.vue'
 
 interface IBlock {
@@ -45,7 +45,6 @@ const blocks = reactive<IBlock[]>([
     email: 'Info@specokraska.ru'
   }
 ])
-
 </script>
 
 <template>
@@ -57,7 +56,7 @@ const blocks = reactive<IBlock[]>([
     >
       магазин
     </app-title>
-  <app-map/>
+    <app-map />
     <section
       class="py-3 px-6 shadow-xl w-full grid grid-cols-1 gap-10 md:place-items-start place-items-center md:grid-cols-3 rounded-xl"
     >

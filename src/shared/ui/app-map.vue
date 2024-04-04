@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { ref } from 'vue'
 
 const center = ref([40, 40])
@@ -46,6 +45,4 @@ function rotationChanged(event: any) {
   </section>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

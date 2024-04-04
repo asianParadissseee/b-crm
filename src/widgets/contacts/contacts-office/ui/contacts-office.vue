@@ -8,7 +8,7 @@ import TimeIcon from '@/shared/assets/icons/time-orange_icon.svg'
 import CursorIcon from '@/shared/assets/icons/cursor-orage_icon.svg'
 import { handleHref } from '@/shared/lib/href.ts'
 import { reactive } from 'vue'
-import MapImage from "@/shared/assets/images/map.svg"
+import MapImage from '@/shared/assets/images/map.svg'
 interface IBlock {
   title: string
   subTitle?: string
@@ -88,8 +88,6 @@ const requisites = reactive<IRequisite[]>([
     value: '9715254112 / 771501001, АО "РАЙФФАЙЗЕНБАНК", г. Москва'
   }
 ])
-
-
 </script>
 
 <template>
@@ -102,7 +100,12 @@ const requisites = reactive<IRequisite[]>([
       центральный офис
     </app-title>
     <div>
-      <img :src="MapImage" alt="карта Москвы" :width="984" :height="330">
+      <img
+        :src="MapImage"
+        alt="карта Москвы"
+        :width="984"
+        :height="330"
+      />
     </div>
     <section
       class="py-3 px-6 shadow-xl w-full grid grid-cols-1 gap-10 md:place-items-start place-items-center md:grid-cols-3 rounded-xl"
@@ -152,7 +155,7 @@ const requisites = reactive<IRequisite[]>([
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-            >+7 (495) 103-48-50
+              >+7 (495) 103-48-50
             </app-text>
             <app-text
               @click="handleHref('tel', '+7 (495) 103-74-75')"
@@ -160,7 +163,7 @@ const requisites = reactive<IRequisite[]>([
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-            >+7 (495) 103-74-75
+              >+7 (495) 103-74-75
             </app-text>
           </div>
         </div>

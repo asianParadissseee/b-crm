@@ -122,8 +122,6 @@ const dealerBlocks = reactive<IDealerBlock[]>([
     ]
   }
 ])
-
-
 </script>
 
 <template>
@@ -184,7 +182,7 @@ const dealerBlocks = reactive<IDealerBlock[]>([
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-            >+7 (495) 103-48-50
+              >+7 (495) 103-48-50
             </app-text>
             <app-text
               @click="handleHref('tel', '+7 (495) 103-74-75')"
@@ -192,7 +190,7 @@ const dealerBlocks = reactive<IDealerBlock[]>([
               :font-weight="'MEDIUM'"
               :font-size="'BASE'"
               :color="'DARK'"
-            >+7 (495) 103-74-75
+              >+7 (495) 103-74-75
             </app-text>
           </div>
         </div>

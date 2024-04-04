@@ -113,8 +113,6 @@ const dealerBlocks = reactive<IDealerBlock[]>([
     ]
   }
 ])
-
-
 </script>
 
 <template>
