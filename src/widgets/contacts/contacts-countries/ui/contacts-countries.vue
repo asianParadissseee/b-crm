@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import AppText from '@/shared/ui/app-text.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
-import GeoIcon from "@/shared/assets/icons/orange-geo.svg"
+import GeoIcon from '@/shared/assets/icons/orange-geo.svg'
 import { reactive, ref } from 'vue'
 
 interface IShop {
-  name: string;
-  address: string;
-  email: string;
+  name: string
+  address: string
+  email: string
   mapLink: string
 }
 
 interface IDealer {
-  city: string;
+  city: string
   shops: IShop[]
 }
 
 interface IDealerBlock {
-  country: string;
+  country: string
   dealers: IDealer[]
 }
 
@@ -165,36 +165,78 @@ function rotationChanged(event: any) {
         <ol-rotate-control></ol-rotate-control>
       </ol-map>
     </section>
-    <section
-      class="grid-cols-1 grid"
-    >
-      <div class="" v-for="block in dealerBlocks" :key="block.country">
-        <app-title :align-text="'LEFT'" :font-weight="'MEDIUM'" :font-size="'XL'" :color="'DARK'">
+    <section class="grid-cols-1 grid">
+      <div
+        class=""
+        v-for="block in dealerBlocks"
+        :key="block.country"
+      >
+        <app-title
+          :align-text="'LEFT'"
+          :font-weight="'MEDIUM'"
+          :font-size="'XL'"
+          :color="'DARK'"
+        >
           {{ block.country }}
         </app-title>
-        <div v-for="dealer in block.dealers" :key="dealer.city">
-         <div class="flex gap-2 items-center mt-4">
-           <div>
-             <img :src="GeoIcon" alt="оранжевая иконка геолокации" width="18" height="21">
-           </div>
-           <app-title :color="'DARK'" :font-size="'BASE'" :font-weight="'MEDIUM'" :align-text="'LEFT'">
-             {{ dealer.city }}
-           </app-title>
-         </div>
-          <div class="grid grid-cols-1 md:grid-cols-3  gap-10 my-5">
-            <div class="shadow p-5 rounder transition-all border border-lightAsh group flex flex-col gap-3 max-w-96 w-full hover:shadow-2xl cursor-pointer"
-                 v-for="(shop,id) in dealer.shops" :key="id">
-              <app-title :align-text="'LEFT'" class="group-hover:text-gold" :font-weight="'MEDIUM'" :font-size="'BASE'"
-                         :color="'DARK'">
+        <div
+          v-for="dealer in block.dealers"
+          :key="dealer.city"
+        >
+          <div class="flex gap-2 items-center mt-4">
+            <div>
+              <img
+                :src="GeoIcon"
+                alt="оранжевая иконка геолокации"
+                width="18"
+                height="21"
+              />
+            </div>
+            <app-title
+              :color="'DARK'"
+              :font-size="'BASE'"
+              :font-weight="'MEDIUM'"
+              :align-text="'LEFT'"
+            >
+              {{ dealer.city }}
+            </app-title>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 my-5">
+            <div
+              class="shadow p-5 rounder transition-all border border-lightAsh group flex flex-col gap-3 max-w-96 w-full hover:shadow-2xl cursor-pointer"
+              v-for="(shop, id) in dealer.shops"
+              :key="id"
+            >
+              <app-title
+                :align-text="'LEFT'"
+                class="group-hover:text-gold"
+                :font-weight="'MEDIUM'"
+                :font-size="'BASE'"
+                :color="'DARK'"
+              >
                 {{ shop.name }}
               </app-title>
-              <app-text :font-size="'XS'" :color="'DARK'" :font-weight="'NORMAL'" :align-text="'LEFT'">
+              <app-text
+                :font-size="'XS'"
+                :color="'DARK'"
+                :font-weight="'NORMAL'"
+                :align-text="'LEFT'"
+              >
                 {{ shop.address }}
               </app-text>
-              <app-text :font-size="'SM'" :color="'DARK'" :font-weight="'NORMAL'" :align-text="'LEFT'">
+              <app-text
+                :font-size="'SM'"
+                :color="'DARK'"
+                :font-weight="'NORMAL'"
+                :align-text="'LEFT'"
+              >
                 {{ shop.email }}
               </app-text>
-              <a :href="shop.mapLink" target="_blank" class="text-sm group-hover:text-gold decoration-dotted underline">
+              <a
+                :href="shop.mapLink"
+                target="_blank"
+                class="text-sm group-hover:text-gold decoration-dotted underline"
+              >
                 показать на карте
               </a>
             </div>
