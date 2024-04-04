@@ -35,7 +35,7 @@ const categoryLinks = reactive<ICategoryLink[]>([
 <template>
   <aside
     id="contacts-sidebar"
-    class="bg-lightAsh w-96 max-w-full rounded hidden lg:flex flex-col"
+    class="bg-lightAsh w-96 h-72 max-w-full rounded hidden lg:flex flex-col"
   >
     <div
       class="px-9 py-5 flex justify-between items-center border-b hover:bg-white transition-all cursor-pointer"
