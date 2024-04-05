@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useSidebarStore } from '../models/store/sidebar.store.ts'
+import { useSidebarStore } from '@/widgets/category-sidebar/models/store/sidebar.store.ts'
 import ArrowGrayIcon from '@/shared/assets/icons/arrow-gray_icon.svg'
 import AppText from '@/shared/ui/app-text.vue'
 import { storeToRefs } from 'pinia'
@@ -56,6 +56,9 @@ import CatalogIconOrange from '@/shared/assets/icons/catalog_orange.svg'
 const store = useSidebarStore()
 const { handleShowSidebar } = store
 const { isShowSidebar } = storeToRefs(store)
+
+
+
 
 const categoryLinks = reactive([
   {

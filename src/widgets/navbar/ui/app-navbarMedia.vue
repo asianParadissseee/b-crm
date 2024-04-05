@@ -5,7 +5,7 @@ import AppText from '@/shared/ui/app-text.vue'
 import GeoOrangeIcon from '@/shared/assets/icons/orange-geo.svg'
 import AppInput from '@/shared/ui/app-input.vue'
 import AppBurger from '@/shared/ui/app-burger.vue'
-import { useSidebarStore } from '@/widgets/sidebar'
+import { useSidebarStore } from '@/widgets/category-sidebar'
 
 const store = useSidebarStore()
 
