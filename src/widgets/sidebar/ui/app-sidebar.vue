@@ -1,7 +1,7 @@
 <template>
   <aside
     :class="[
-      'block fixed z-50 bg-white right-0 left-0 top-0 lg:hidden transition-all duration-700 overflow-hidden',
+      'block fixed z-50 bg-white right-0 left-0 top-0 lg:hidden transition-all duration-700 overflow-x-hidden',
       isShowSidebar ? 'h-svh opacity-100 visible' : 'h-0 opacity-0 invisible'
     ]"
   >
