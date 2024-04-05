@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import AppText from '@/shared/ui/app-text.vue'
 import ArrowGrayIcon from '@/shared/assets/icons/arrow-gray_icon.svg'
+import { reactive } from 'vue'
 
-const categoryLinks = [
+const categoryLinks = reactive([
   {
     link: 'Безвоздушные окрасочные аппараты',
     path: ''
@@ -63,7 +64,7 @@ const categoryLinks = [
     link: 'Запчасти',
     path: ''
   }
-]
+])
 </script>
 
 <template>

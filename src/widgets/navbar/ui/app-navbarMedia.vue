@@ -5,6 +5,12 @@ import AppText from '@/shared/ui/app-text.vue'
 import GeoOrangeIcon from '@/shared/assets/icons/orange-geo.svg'
 import AppInput from '@/shared/ui/app-input.vue'
 import AppBurger from '@/shared/ui/app-burger.vue'
+import { useSidebarStore } from '@/widgets/sidebar'
+
+const store = useSidebarStore()
+
+const {handleShowSidebar} = store
+
 </script>
 
 <template>
@@ -64,7 +70,7 @@ import AppBurger from '@/shared/ui/app-burger.vue'
       </div>
     </div>
     <div class="container px-5 max-w-9/12 w-full mx-auto flex justify-between items-center mt-7">
-      <app-burger />
+      <app-burger @click="handleShowSidebar" />
       <app-input
         is-icon
         :border-color="'GOLD'"

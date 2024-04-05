@@ -1,3 +1,3 @@
 import AppSidebar from './ui/app-sidebar.vue'
-
-export { AppSidebar }
+import {useSidebarStore} from "./models/store/sidebar.store.ts"
+export { AppSidebar, useSidebarStore }
