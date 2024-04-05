@@ -5,11 +5,11 @@ import AppText from '@/shared/ui/app-text.vue'
 import GeoOrangeIcon from '@/shared/assets/icons/orange-geo.svg'
 import AppInput from '@/shared/ui/app-input.vue'
 import AppBurger from '@/shared/ui/app-burger.vue'
-import { useSidebarStore } from '@/widgets/category-sidebar'
+import { useSidebarCategoryStore } from '@/widgets/category-sidebar'
 
-const store = useSidebarStore()
+const store = useSidebarCategoryStore()
 
-const { handleShowSidebar } = store
+const { handleShowCategorySidebar } = store
 </script>
 
 <template>
@@ -69,7 +69,7 @@ const { handleShowSidebar } = store
       </div>
     </div>
     <div class="container px-5 max-w-9/12 w-full mx-auto flex justify-between items-center mt-7">
-      <app-burger @click="handleShowSidebar" />
+      <app-burger @click="handleShowCategorySidebar" />
       <app-input
         is-icon
         :border-color="'GOLD'"

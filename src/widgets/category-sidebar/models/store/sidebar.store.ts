@@ -1,15 +1,15 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useSidebarStore = defineStore('sidebar', () => {
-  const isShowSidebar = ref<boolean>(false)
+export const useSidebarCategoryStore = defineStore('sidebar', () => {
+  const isShowCategorySidebar = ref<boolean>(false)
 
-  function handleShowSidebar() {
-    isShowSidebar.value = !isShowSidebar.value
+  function handleShowCategorySidebar() {
+    isShowCategorySidebar.value = !isShowCategorySidebar.value
   }
 
   return {
-    isShowSidebar,
-    handleShowSidebar
+    isShowCategorySidebar,
+    handleShowCategorySidebar
   }
 })
