@@ -5,11 +5,20 @@ import AppText from '@/shared/ui/app-text.vue'
 import { storeToRefs } from 'pinia'
 import CatalogIconOrange from '@/shared/assets/icons/catalog_orange.svg'
 import { useSidebarNavigationStore } from '../models/store/sidebar.store.ts'
+import { useRouter } from 'vue-router'
+
 const store = useSidebarNavigationStore()
 const { handleShowNavigationSidebar } = store
 const { isShowNavigationSidebar } = storeToRefs(store)
 
-const categoryLinks = reactive([
+const router = useRouter()
+
+interface ILink {
+  link: string
+  path: string
+}
+
+const categoryLinks = reactive<ILink[]>([
   {
     link: 'О компании',
     path: '/about'
@@ -39,6 +48,12 @@ const categoryLinks = reactive([
     path: '/contacts'
   }
 ])
+
+function handleClick(link: ILink) {
+  router.push(link.path)
+  handleShowNavigationSidebar()
+}
+
 </script>
 <template>
   <aside
@@ -68,7 +83,7 @@ const categoryLinks = reactive([
       class="px-9 py-5 flex justify-between items-center border-b transition-all cursor-pointer"
       v-for="(link, id) in categoryLinks"
       :key="id"
-      @click=""
+      @click="handleClick(link)"
     >
       <app-text
         :align-text="'LEFT'"
