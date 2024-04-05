@@ -5,9 +5,7 @@ useTitle('Регистрация')
 </script>
 
 <template>
-  <main class="my-20 min-h-svh">
-
-  </main>
+  <main class="my-20 min-h-svh"></main>
 </template>
 
 <style scoped lang="scss"></style>

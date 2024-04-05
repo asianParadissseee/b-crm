@@ -9,8 +9,7 @@ import { useSidebarStore } from '@/widgets/sidebar'
 
 const store = useSidebarStore()
 
-const {handleShowSidebar} = store
-
+const { handleShowSidebar } = store
 </script>
 
 <template>

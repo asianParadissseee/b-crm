@@ -1,7 +1,7 @@
 <template>
   <app-navbar v-if="!isResponsive" />
   <app-navbar-media v-else />
-  <app-sidebar/>
+  <app-sidebar />
   <backcall-form />
   <slot></slot>
   <app-footer v-if="!isResponsive" />

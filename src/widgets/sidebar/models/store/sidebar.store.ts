@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useSidebarStore = defineStore("sidebar", ()=>{
+export const useSidebarStore = defineStore('sidebar', () => {
   const isShowSidebar = ref<boolean>(false)
 
-  function handleShowSidebar(){
+  function handleShowSidebar() {
     isShowSidebar.value = !isShowSidebar.value
   }
 
