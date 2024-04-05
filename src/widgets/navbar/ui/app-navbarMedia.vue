@@ -7,9 +7,7 @@ import AppInput from '@/shared/ui/app-input.vue'
 import AppBurger from '@/shared/ui/app-burger.vue'
 import { useSidebarCategoryStore } from '@/widgets/category-sidebar'
 
-const store = useSidebarCategoryStore()
-
-const { handleShowCategorySidebar } = store
+const { handleShowCategorySidebar } = useSidebarCategoryStore()
 </script>
 
 <template>

@@ -1,83 +1,50 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useSidebarCategoryStore } from '@/widgets/category-sidebar'
 import ArrowGrayIcon from '@/shared/assets/icons/arrow-gray_icon.svg'
 import AppText from '@/shared/ui/app-text.vue'
 import { storeToRefs } from 'pinia'
 import CatalogIconOrange from '@/shared/assets/icons/catalog_orange.svg'
-
-const store = useSidebarCategoryStore()
-const { handleShowCategorySidebar } = store
-const { isShowCategorySidebar } = storeToRefs(store)
+import { useSidebarNavigationStore } from '../models/store/sidebar.store.ts'
+const store = useSidebarNavigationStore()
+const { handleShowNavigationSidebar } = store
+const { isShowNavigationSidebar } = storeToRefs(store)
 
 const categoryLinks = reactive([
   {
-    link: 'Безвоздушные окрасочные аппараты',
-    path: ''
+    link: 'О компании',
+    path: '/about'
   },
   {
-    link: 'Промышленное окрасочное оборудование',
-    path: ''
+    link: 'Новости',
+    path: '/news'
   },
   {
-    link: 'Разметочные машины',
-    path: ''
+    link: 'Акции',
+    path: '/'
   },
   {
-    link: 'Шлифмашинки',
-    path: ''
+    link: 'Статьи',
+    path: '/articles'
   },
   {
-    link: 'Оборудование для штукатурки и шпаклевки',
-    path: ''
+    link: 'Доставка и оплата',
+    path: '/'
   },
   {
-    link: 'Сопутствующие товары',
-    path: ''
+    link: 'Youtube Канал',
+    path: '/youtube'
   },
   {
-    link: 'Комплектующие для окрасочного оборудования',
-    path: ''
-  },
-  {
-    link: 'Краскопульты',
-    path: ''
-  },
-  {
-    link: 'Сварочное оборудование',
-    path: ''
-  },
-  {
-    link: 'Зарядные устройства',
-    path: ''
-  },
-  {
-    link: 'Индукционные нагреватели',
-    path: ''
-  },
-  {
-    link: 'Инструменты для правки вмятин кузова',
-    path: ''
-  },
-  {
-    link: 'Клепальный инструмент',
-    path: ''
-  },
-  {
-    link: 'Аксессуары для мастерской',
-    path: ''
-  },
-  {
-    link: 'Запчасти',
-    path: ''
+    link: 'Контакты',
+    path: '/contacts'
   }
 ])
 </script>
 <template>
   <aside
     :class="[
-      'block fixed z-50 bg-white right-0 left-0 top-0 lg:hidden transition-all duration-700 overflow-x-hidden',
-      isShowCategorySidebar ? 'h-svh opacity-100 visible' : 'h-0 opacity-0 invisible'
+      'block fixed z-40 bg-white right-0  left-0 bottom-0 lg:hidden transition-all duration-700 overflow-x-hidden',
+      isShowNavigationSidebar ? 'h-svh opacity-100 visible' : 'h-0 opacity-0 invisible'
     ]"
   >
     <div class="w-full z-50 h-14 bg-white shadow-2xl flex justify-between items-center px-5">
@@ -91,7 +58,7 @@ const categoryLinks = reactive([
         Каталог
       </div>
       <div
-        @click="handleShowCategorySidebar"
+        @click="handleShowNavigationSidebar"
         class="text-ash text-2xl"
       >
         &#10005;
@@ -101,6 +68,7 @@ const categoryLinks = reactive([
       class="px-9 py-5 flex justify-between items-center border-b transition-all cursor-pointer"
       v-for="(link, id) in categoryLinks"
       :key="id"
+      @click=""
     >
       <app-text
         :align-text="'LEFT'"

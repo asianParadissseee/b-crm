@@ -8,9 +8,23 @@ import MenuIcon from '@/shared/assets/icons/menu.svg'
 import AppText from '@/shared/ui/app-text.vue'
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSidebarNavigationStore } from '@/widgets/sidebar'
+import { storeToRefs } from 'pinia'
 
+const store = useSidebarNavigationStore()
+const { handleShowNavigationSidebar } = store
+const { isShowNavigationSidebar } = storeToRefs(store)
+console.log(isShowNavigationSidebar)
 const router = useRouter()
-const navigation = reactive([
+
+interface INavigation {
+  icon: string
+  name: string
+  link?: string
+  handle?: () => void
+}
+
+const navigation = reactive<INavigation[]>([
   {
     icon: HomeOrangeIcon,
     name: 'Домой',
@@ -39,9 +53,18 @@ const navigation = reactive([
   {
     icon: MenuIcon,
     name: 'Еще',
-    link: '/'
+    handle: handleShowNavigationSidebar
   }
 ])
+
+function handleClick(nav: INavigation) {
+  if (nav.link) {
+    router.push(nav?.link)
+  }
+  if (nav.handle) {
+    nav.handle()
+  }
+}
 </script>
 
 <template>
@@ -52,7 +75,7 @@ const navigation = reactive([
         class="flex flex-col gap-3"
         v-for="(nav, id) in navigation"
         :key="id"
-        @click="router.push(nav.link)"
+        @click="handleClick(nav)"
       >
         <img
           :src="nav.icon"
