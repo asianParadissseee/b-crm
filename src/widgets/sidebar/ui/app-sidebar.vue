@@ -53,7 +53,6 @@ function handleClick(link: ILink) {
   router.push(link.path)
   handleShowNavigationSidebar()
 }
-
 </script>
 <template>
   <aside

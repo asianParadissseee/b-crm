@@ -61,7 +61,7 @@
           :color="'DARK'"
           :font-weight="'NORMAL'"
         >
-          +7 (495) 103-48-50
+          +7 (706) 641-33-03
         </app-text>
       </div>
       <div class="flex items-center gap-4">
