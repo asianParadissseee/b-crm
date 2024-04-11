@@ -1,13 +1,23 @@
 <template>
   <div>
-    <app-link to="/" class="flex items-center font-black" :color="'GOLD'" :font-size="'LG'" style="color: #FFC904">
+    <app-link
+      to="/"
+      class="flex items-center font-black"
+      :color="'GOLD'"
+      :font-size="'LG'"
+      style="color: #ffc904"
+    >
       <img
         :src="AppNewLogo"
         alt="icon for logo of website"
-        :width="isResponsive ? 80 :80"
-        :height="isResponsive ? 40 : 40"
+        :width="!isResponsive ? 80 : 19"
+        :height="!isResponsive ? 40 : 40"
       />
-      Bek<span class="text-blue-200" style="color: #122D40">Electro</span>
+      Bek<span
+        class="text-blue-200"
+        style="color: #122d40"
+        >Electro</span
+      >
     </app-link>
   </div>
 </template>
