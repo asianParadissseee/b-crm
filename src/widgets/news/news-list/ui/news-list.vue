@@ -12,7 +12,7 @@ const props = defineProps<NewsListProps>()
 <template>
   <section
     id="news-list"
-    class="my-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
+    class="my-10 grid grid-cols-1 gap-4 sm:grid-cols-3"
   >
     <News
       :title="news.title"

@@ -2,16 +2,16 @@ export interface ArticlesResponse {
   _id: string
   backgroundImage: string
   title: string
+  subTitle: string
   description: string
-  subDescription: string
   createAt: string
 }
 
 export interface ArticlesDto {
   backgroundImage: string
   title: string
+  subTitle: string
   description: string
-  subDescription: string
 }
 
 export interface ArticlesSchema {

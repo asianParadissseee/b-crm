@@ -6,7 +6,6 @@ import { useFetchArticles } from '@/entity/articles'
 import { ArticlesList } from '@/widgets/articles/articles-list'
 import { ErrorContent } from '@/widgets/error-content'
 
-
 useTitle('Статьи')
 const { data: articles, isLoading, error, isError } = useFetchArticles()
 </script>
@@ -33,10 +32,12 @@ const { data: articles, isLoading, error, isError } = useFetchArticles()
       <div v-else-if="isError">
         <error-content :message="error?.message" />
       </div>
-      <articles-list v-if="articles" :articles="articles" />
+      <articles-list
+        v-if="articles"
+        :articles="articles"
+      />
     </div>
   </main>
 </template>
-
 
 <style scoped lang="scss"></style>

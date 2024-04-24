@@ -1,5 +1,3 @@
 import ErrorContent from './ui/error-content.vue'
 
-export {
-  ErrorContent
-}
+export { ErrorContent }
