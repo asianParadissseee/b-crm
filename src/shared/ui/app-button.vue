@@ -12,7 +12,7 @@ enum AppButtonColor {
 }
 
 enum AppButtonSize {
-  LARGE = 'w-44',
+  LARGE = 'w-52',
   MEDIUM = 'w-40',
   SMALL = 'w-36'
 }
@@ -56,6 +56,8 @@ const buttonAlignClass = AppButtonAlign[props.align]
       'font-bold',
       'hover:bg-gold/70',
       'rounded',
+      'px-8',
+      'py-4',
       buttonAlignClass,
       buttonColorClass,
       buttonSizeClass

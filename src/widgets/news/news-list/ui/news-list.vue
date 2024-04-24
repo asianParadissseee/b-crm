@@ -12,7 +12,7 @@ const props = defineProps<NewsListProps>()
 <template>
   <section
     id="news-list"
-    class="my-10 grid grid-cols-1 gap-4 sm:grid-cols-3"
+    class="my-10 grid grid-cols-1 gap-4 sm:grid-cols-2 min-h-svh"
   >
     <News
       :title="news.title"
@@ -21,8 +21,8 @@ const props = defineProps<NewsListProps>()
       v-if="props.newsData?.length"
       :create-at="news.createAt"
       v-for="news in props.newsData"
-      :key="news._id"
-      :_id="news._id"
+      :key="news.id"
+      :id="news.id"
     />
     <app-title
       v-else

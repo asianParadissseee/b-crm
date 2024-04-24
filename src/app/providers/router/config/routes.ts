@@ -12,6 +12,11 @@ export const routes = [
     component: () => import('@/pages/news/ui/news-page.vue')
   },
   {
+    path: '/news/:id',
+    name: 'news-detail',
+    component: () => import('@/pages/news/news-detail/ui/news-detail.page.vue')
+  },
+  {
     path: '/articles',
     name: 'articles',
     component: () => import('@/pages/articles/ui/articles-page.vue')

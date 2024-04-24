@@ -1,5 +1,5 @@
 export interface NewsResponse {
-  _id: number
+  id: number
   backgroundImage: string
   title: string
   description: string
