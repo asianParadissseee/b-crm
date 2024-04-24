@@ -24,8 +24,8 @@ const props = defineProps<NewsDetailProps>()
     >
       {{ props.news.title }}
     </app-title>
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-5 w-96">
+    <div class="flex justify-between my-10 flex-col-reverse xl:flex-row">
+      <div class="flex flex-col gap-5 max-w-96 w-full">
         <app-text
           :font-size="'BASE'"
           :align-text="'LEFT'"
@@ -57,7 +57,7 @@ const props = defineProps<NewsDetailProps>()
             :align-text="'LEFT'"
             :color="'DARK'"
             :font-weight.attr="'MEDIUM'"
-            >Описание
+          >Описание
           </app-title>
           <app-text
             :font-weight="'MEDIUM'"
@@ -69,7 +69,7 @@ const props = defineProps<NewsDetailProps>()
           </app-text>
         </div>
       </div>
-      <div>
+      <div class="max-w-96">
         <img
           :src="props.news.backgroundImage"
           :alt="props.news.description"

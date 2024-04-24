@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
 import AppModal from '@/shared/ui/app-modal.vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 import AppText from '@/shared/ui/app-text.vue'
@@ -6,7 +7,6 @@ import AppInput from '@/shared/ui/app-input.vue'
 import AppButton from '@/shared/ui/app-button.vue'
 import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
 import { useBackcallStore } from '../models/store/backcall.store.ts'
-import { storeToRefs } from 'pinia'
 
 const { isResponsive } = useWindowSize(1024)
 
