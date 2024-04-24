@@ -7,5 +7,5 @@ export function useFetchArticles() {
     queryKey: ['articles'],
     queryFn: getArticlesService
   })
-  return { data, error, isLoading , isError}
+  return { data, error, isLoading, isError }
 }
