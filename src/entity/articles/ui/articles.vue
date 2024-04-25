@@ -29,8 +29,8 @@
         {{ props.title }}
       </app-title>
       <app-text
-        :font-size="'SM'"
-        :color="'LIGHT_ASH'"
+        :font-size="'LG'"
+        :color="'ASH'"
         :font-weight="'NORMAL'"
       >
         {{ props.subTitle }}

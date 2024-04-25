@@ -14,15 +14,29 @@ const props = defineProps<ArticlesDetailProps>()
 
 <template>
   <div>
-    <app-title :font-weight="'MEDIUM'" :color="'DARK'" :align-text="'LEFT'" :font-size="'XL4'">
+    <app-title
+      :font-weight="'MEDIUM'"
+      :color="'DARK'"
+      :align-text="'LEFT'"
+      :font-size="'XL4'"
+    >
       {{ props.articles.title }}
     </app-title>
     <div class="flex justify-between">
       <div class="flex flex-col gap-3 mt-10 w-1/3">
-        <app-text :color="'ASH'" :align-text="'LEFT'" :font-size="'SM'" :font-weight="'MEDIUM'">
+        <app-text
+          :color="'ASH'"
+          :align-text="'LEFT'"
+          :font-size="'SM'"
+          :font-weight="'MEDIUM'"
+        >
           {{ props.articles.createAt }}
         </app-text>
-        <app-title :font-size="'XL'" :align-text="'LEFT'" :color="'DARK'">
+        <app-title
+          :font-size="'XL'"
+          :align-text="'LEFT'"
+          :color="'DARK'"
+        >
           {{ props.articles.subTitle }}
         </app-title>
         <app-text>
@@ -30,7 +44,12 @@ const props = defineProps<ArticlesDetailProps>()
         </app-text>
       </div>
       <div>
-        <img :src="props.articles.backgroundImage" :alt="props.articles.subTitle" :width="649" :height="507">
+        <img
+          :src="props.articles.backgroundImage"
+          :alt="props.articles.subTitle"
+          :width="649"
+          :height="507"
+        />
       </div>
     </div>
     <hr class="h-0.5 bg-ash my-10" />
