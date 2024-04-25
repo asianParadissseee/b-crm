@@ -56,7 +56,7 @@ const buttonAlignClass = AppButtonAlign[props.align]
       'font-bold',
       'hover:bg-gold/70',
       'rounded',
-       'px-2',
+      'px-2',
       buttonAlignClass,
       buttonColorClass,
       buttonSizeClass

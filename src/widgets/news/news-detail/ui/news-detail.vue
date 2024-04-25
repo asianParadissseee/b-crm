@@ -57,7 +57,7 @@ const props = defineProps<NewsDetailProps>()
             :align-text="'LEFT'"
             :color="'DARK'"
             :font-weight.attr="'MEDIUM'"
-          >Описание
+            >Описание
           </app-title>
           <app-text
             :font-weight="'MEDIUM'"

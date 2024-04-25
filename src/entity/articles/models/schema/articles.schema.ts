@@ -1,5 +1,5 @@
 export interface ArticlesResponse {
-  _id: string
+  id: number
   backgroundImage: string
   title: string
   subTitle: string
