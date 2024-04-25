@@ -9,9 +9,9 @@ const props = defineProps<ArticlesListProps>()
 </script>
 
 <template>
-  <section
+  <article
     id="articles-list"
-    class="my-10 grid grid-cols-1 gap-4 md:grid-cols-3"
+    class="grid grid-cols-1 gap-4 md:grid-cols-3"
   >
     <Articles
       v-for="article in props.articles"
@@ -22,7 +22,7 @@ const props = defineProps<ArticlesListProps>()
       :sub-title="article.subTitle"
       :create-at="article.createAt"
     />
-  </section>
+  </article>
 </template>
 
 <style scoped lang="scss"></style>

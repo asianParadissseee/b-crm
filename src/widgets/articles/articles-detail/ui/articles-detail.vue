@@ -4,12 +4,16 @@ import AppTitle from '@/shared/ui/app-title.vue'
 import AppText from '@/shared/ui/app-text.vue'
 import AppButton from '@/shared/ui/app-button.vue'
 import { useRouter } from 'vue-router'
+import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 interface ArticlesDetailProps {
   articles: ArticlesResponse
 }
+
 const route = useRouter()
 const props = defineProps<ArticlesDetailProps>()
+
+useTitle(props.articles.title)
 </script>
 
 <template>
