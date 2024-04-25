@@ -1,5 +1,5 @@
 <template>
-  <div class="border max-w-96 min-h-80 rounded-xl border-gray-400">
+  <div @click="handleArticleDetail" class="border max-w-96 min-h-80 rounded-xl border-gray-400">
     <div>
       <img
         :src="props.backgroundImage"
@@ -36,16 +36,24 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+import { computed } from 'vue'
 import { ArticlesResponse } from '@/entity/articles'
 import AppText from '@/shared/ui/app-text.vue'
-import { computed } from 'vue'
 import AppTitle from '@/shared/ui/app-title.vue'
 
 const props = defineProps<ArticlesResponse>()
 const formattedDate = computed(() => {
-  const match = props.createAt.match(/\d{4}-\d{2}-\d{2}/)
+  const match = props.createAt?.match(/\d{4}-\d{2}-\d{2}/)
   return match ? match[0] : null
 })
+
+const route = useRouter()
+
+const handleArticleDetail = () => {
+  route.push('/articles/' + props.id)
+}
+
 </script>
 
 <style scoped></style>

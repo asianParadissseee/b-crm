@@ -1,3 +1,3 @@
 import ArticlesDetail from './ui/articles-detail.vue'
-
-export { ArticlesDetail }
+import {useFetchArticleDetail} from "./models/api/article-detail.api.ts"
+export { ArticlesDetail, useFetchArticleDetail }

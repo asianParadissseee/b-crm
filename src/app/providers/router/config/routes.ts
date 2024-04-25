@@ -22,6 +22,11 @@ export const routes = [
     component: () => import('@/pages/articles/ui/articles-page.vue')
   },
   {
+    path: '/articles/:id',
+    name: 'articles-detail',
+    component: () => import('@/pages/articles/article-detail/ui/article-detail.page.vue')
+  },
+  {
     path: '/auth',
     name: 'auth',
     component: () => import('@/pages/auth/ui/auth-page.vue')
