@@ -10,7 +10,7 @@
     </app-title>
     <article class="my-10">
       <app-title
-        :font-size="'XL2'"
+        :font-size="!isMobile ? 'XL2' : 'XL'"
         :font-weight="'MEDIUM'"
       >
         Компания СпецОкраска.Ру не просто интернет-магазин, где вы можете купить окрасочное оборудование, а настоящая
@@ -67,7 +67,7 @@
         <span
           @click="handleHref('mailto', 'info@bekElectro.kz')"
           class="text-gold cursor-pointer"
-          >e-mail: info@bekElectro.kz</span
+        >e-mail: info@bekElectro.kz</span
         >
       </app-text>
     </div>
@@ -81,7 +81,12 @@ import AppText from '@/shared/ui/app-text.vue'
 import { reactive } from 'vue'
 import { AboutCard } from '@/widgets/about-company/about-card'
 import { handleHref } from '@/shared/lib/href.ts'
+import { useTitle } from '@/shared/lib/composables/use-title.ts'
+import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
 
+useTitle('О компании')
+
+const isMobile = useWindowSize(640)
 const cards = reactive([
   {
     title: 'Вы производите или поставляете окрасочное оборудование?\n',

@@ -65,7 +65,6 @@ const props = defineProps({
 
 const sizeClass = AppInputSize[props.size]
 const borderColorClass = AppInputBorderColor[props.borderColor]
-
 </script>
 
 <style lang="scss" scoped></style>

@@ -9,11 +9,12 @@ interface AboutCardProps {
   link: string
 }
 
+
 defineProps<AboutCardProps>()
 </script>
 
 <template>
-  <div class="p-10 border border-ash max-w-full lg:h-96 lg:max-w-96">
+  <div class="p-10 border border-ash max-w-full min-h-96 sm:min-h-full lg:h-96 lg:max-w-96">
     <div class="mb-20 flex flex-col gap-4 h-40">
       <app-title
         :font-weight="'MEDIUM'"
