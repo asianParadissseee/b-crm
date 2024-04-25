@@ -7,6 +7,11 @@ export const routes = [
     component: HomePage
   },
   {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/pages/about-company/ui/about-company.vue')
+  },
+  {
     path: '/news',
     name: 'news',
     component: () => import('@/pages/news/ui/news-page.vue')
@@ -45,5 +50,15 @@ export const routes = [
     path: '/contacts',
     name: 'contacts',
     component: () => import('@/pages/contacts-page/ui/contacts-page.vue')
+  },
+  {
+    path: '/catalog',
+    name: 'catalog',
+    component: () => import('@/pages/catalog/ui/catalog-page.vue')
+  },
+  {
+    path: '/catalog/:id/catalog-products',
+    name: 'catalog-products',
+    component: () => import('@/pages/catalog/catalog-products/ui/catalog-products.page.vue')
   }
 ]

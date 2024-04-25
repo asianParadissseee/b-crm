@@ -6,9 +6,12 @@ import { ArticlesList } from '@/widgets/articles/articles-list'
 import { ErrorContent } from '@/widgets/error-content'
 import { LayoutNav } from '@/widgets/navbar'
 import { ArticleSidebar } from '@/widgets/articles/article-sidebar'
+import { ref } from 'vue'
 
 useTitle('Статьи')
 const { data: articles, isLoading, error, isError } = useFetchArticles()
+
+const searchQuery = ref('lox')
 </script>
 <template>
   <layout-nav nav-link="Статьи">
@@ -19,7 +22,7 @@ const { data: articles, isLoading, error, isError } = useFetchArticles()
       Статьи
     </app-title>
     <div class="flex items-start my-10 gap-10">
-      <article-sidebar />
+      <article-sidebar v-model:search-query="searchQuery" />
       <div>
         <div v-if="isLoading">Загрузка</div>
         <div v-else-if="isError">

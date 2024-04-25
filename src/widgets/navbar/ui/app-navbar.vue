@@ -173,7 +173,11 @@ const socialLinks = reactive<ISocialLink[]>([
 const routerLinks = reactive([
   {
     name: 'Каталог',
-    path: ''
+    path: '/catalog'
+  },
+  {
+    name: 'О компании',
+    path: '/about'
   },
   {
     name: 'Акции',
