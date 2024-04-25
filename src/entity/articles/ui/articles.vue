@@ -1,11 +1,15 @@
 <template>
-  <div @click="handleArticleDetail" class="border max-w-96 min-h-80 rounded-xl border-gray-400">
+  <div
+    @click="handleArticleDetail"
+    class="border max-w-80 min-h-80 rounded-xl border-gray-400"
+  >
     <div>
       <img
         :src="props.backgroundImage"
         :alt="props.title"
         :width="312"
         :height="200"
+        class="object-cover"
       />
     </div>
     <div class="p-4 flex flex-col gap-5">
@@ -53,7 +57,6 @@ const route = useRouter()
 const handleArticleDetail = () => {
   route.push('/articles/' + props.id)
 }
-
 </script>
 
 <style scoped></style>

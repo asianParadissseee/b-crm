@@ -11,7 +11,7 @@ const props = defineProps<ArticlesListProps>()
 <template>
   <section
     id="articles-list"
-    class="my-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
+    class="my-10 grid grid-cols-1 gap-4 md:grid-cols-3"
   >
     <Articles
       v-for="article in props.articles"
