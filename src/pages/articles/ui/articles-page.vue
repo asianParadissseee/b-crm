@@ -9,7 +9,6 @@ import { ArticleSidebar } from '@/widgets/articles/article-sidebar'
 
 useTitle('Статьи')
 const { data: articles, isLoading, error, isError } = useFetchArticles()
-
 </script>
 <template>
   <layout-nav nav-link="Статьи">

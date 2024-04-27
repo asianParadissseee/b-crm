@@ -67,7 +67,7 @@
         <span
           @click="handleHref('mailto', 'info@bekElectro.kz')"
           class="text-gold cursor-pointer"
-        >e-mail: info@bekElectro.kz</span
+          >e-mail: info@bekElectro.kz</span
         >
       </app-text>
     </div>

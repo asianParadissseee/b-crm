@@ -9,7 +9,6 @@ interface AboutCardProps {
   link: string
 }
 
-
 defineProps<AboutCardProps>()
 </script>
 
