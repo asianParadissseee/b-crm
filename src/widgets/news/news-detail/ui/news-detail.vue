@@ -4,6 +4,7 @@ import AppTitle from '@/shared/ui/app-title.vue'
 import AppText from '@/shared/ui/app-text.vue'
 import AppButton from '@/shared/ui/app-button.vue'
 import { useRouter } from 'vue-router'
+import { useTitle } from '@/shared/lib/composables/use-title.ts'
 
 interface NewsDetailProps {
   news: NewsResponse
@@ -12,6 +13,7 @@ interface NewsDetailProps {
 const route = useRouter()
 
 const props = defineProps<NewsDetailProps>()
+useTitle(props.news.title)
 </script>
 
 <template>
