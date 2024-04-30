@@ -1,5 +1,3 @@
-import PersonalData from "./ui/personal-data.vue"
+import PersonalData from './ui/personal-data.vue'
 
-export {
-  PersonalData
-}
+export { PersonalData }

@@ -1,5 +1,3 @@
-import NewsLetter from "./ui/news-letter.vue"
+import NewsLetter from './ui/news-letter.vue'
 
-export {
-  NewsLetter
-}
+export { NewsLetter }

@@ -1,5 +1,3 @@
-import CardShop from "./ui/card-shop.vue"
+import CardShopPrivateOffice from './ui/card-shop.vue'
 
-export {
-  CardShop
-}
+export { CardShopPrivateOffice }

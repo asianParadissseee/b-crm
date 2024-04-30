@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { CategorySidebar } from '@/widgets/category-sidebar'
-import { AppSlider } from '@/widgets/slider'
+import { AppSlider } from '@/widgets/home/slider'
 import { ValuationCards } from '@/widgets/valuation-cards'
 import { AboutCompany } from '@/widgets/home/about-company'
 import { useTitle } from '@/shared/lib/composables/use-title.ts'

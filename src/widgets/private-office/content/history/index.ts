@@ -1,5 +1,3 @@
-import HistoryInfo from "./ui/history-info.vue"
+import HistoryInfo from './ui/history-info.vue'
 
-export {
-  HistoryInfo
-}
+export { HistoryInfo }

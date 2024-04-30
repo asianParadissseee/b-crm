@@ -13,8 +13,8 @@ export const routes = [
   },
   {
     path: '/private-office/',
-    name: "private-office",
-    component: ()=>import('@/pages/private-office/ui/private-office.page.vue'),
+    name: 'private-office',
+    component: () => import('@/pages/private-office/ui/private-office.page.vue')
   },
   {
     path: '/about',
