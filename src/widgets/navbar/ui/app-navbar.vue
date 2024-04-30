@@ -193,7 +193,7 @@ const routerLinks = reactive([
   },
   {
     name: 'Доставка и оплата',
-    path: ''
+    path: '/delivery'
   },
   {
     name: 'Контакты',

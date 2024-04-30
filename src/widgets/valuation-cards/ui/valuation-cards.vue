@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 import SagolaImg from '@/shared/assets/images/sagola-img.svg'
-import SchaterImg from '@/shared/assets/images/schater-img.svg';
+import SchaterImg from '@/shared/assets/images/schater-img.svg'
 import YokijiImg from '@/shared/assets/images/yokiji-img.svg'
 import SagolaIcon from '@/shared/assets/icons/sagola-sub_icon.svg'
 import SchaterIcon from '@/shared/assets/icons/schater-sub_icon.svg'

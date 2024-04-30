@@ -7,6 +7,11 @@ export const routes = [
     component: HomePage
   },
   {
+    path: '/delivery',
+    name: 'delivery',
+    component: () => import('@/pages/delivery/ui/delivery-page.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('@/pages/about-company/ui/about-company.vue')
