@@ -1,6 +1,11 @@
 <template>
   <layout-nav nav-link="Каталог">
-    <app-title :font-size="'XL4'" font-weight="MEDIUM"> Каталог продукции </app-title>
+    <app-title
+      :font-size="'XL4'"
+      font-weight="MEDIUM"
+    >
+      Каталог продукции
+    </app-title>
     <section class="my-20">Каталог отстутствует</section>
     <section class="my-20">
       <valuation-cards />

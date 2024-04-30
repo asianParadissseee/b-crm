@@ -12,6 +12,11 @@ export const routes = [
     component: () => import('@/pages/delivery/ui/delivery-page.vue')
   },
   {
+    path: '/private-office/',
+    name: "private-office",
+    component: ()=>import('@/pages/private-office/ui/private-office.page.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('@/pages/about-company/ui/about-company.vue')

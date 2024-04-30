@@ -11,7 +11,10 @@ useTitle('Новости')
 
 <template>
   <layout-nav nav-link="Новости">
-    <app-title font-size="XL4" font-weight="MEDIUM">
+    <app-title
+      font-size="XL4"
+      font-weight="MEDIUM"
+    >
       Новости
     </app-title>
     <div v-if="isLoading">Загрузка</div>

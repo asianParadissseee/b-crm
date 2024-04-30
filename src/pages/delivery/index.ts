@@ -1,5 +1,3 @@
-import  DeliveryPage from "./ui/delivery-page.vue"
+import DeliveryPage from './ui/delivery-page.vue'
 
-export {
-  DeliveryPage
-}
+export { DeliveryPage }
