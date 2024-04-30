@@ -1,12 +1,12 @@
 <template>
-  <div class="grid grid-rows-2 sm:grid-cols-3 gap-5">
+  <div class="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-3 gap-5">
     <div
       v-for="(card, id) in cards"
       :key="id"
     >
       <div class="col-span-3 mb-5">
         <img
-          class="rounded"
+          class="rounded w-80 h-60"
           :src="card.img"
           :alt="card.description"
           :width="312"
@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 import SagolaImg from '@/shared/assets/images/sagola-img.svg'
-// import SchaterImg from '@/shared/assets/images/schater-img.svg';
+import SchaterImg from '@/shared/assets/images/schater-img.svg';
 import YokijiImg from '@/shared/assets/images/yokiji-img.svg'
 import SagolaIcon from '@/shared/assets/icons/sagola-sub_icon.svg'
 import SchaterIcon from '@/shared/assets/icons/schater-sub_icon.svg'
@@ -64,7 +64,7 @@ const cards = [
     description: 'Представительства во всех регионах РФ, а также в Республике Беларусь и Казахстане.'
   },
   {
-    img: YokijiImg,
+    img: SchaterImg,
     icon: SchaterIcon,
     title: 'Доставка в любой регион России',
     description: 'Осуществляется любой транспортной компанией'

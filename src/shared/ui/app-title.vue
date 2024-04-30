@@ -32,7 +32,7 @@ enum AppTitleFontSize {
 }
 enum AppTitleFontWeight {
   NORMAL = 'font-normal',
-  MEDIUM = 'font-medium'
+  MEDIUM = 'font-bold'
 }
 
 const props = defineProps({
