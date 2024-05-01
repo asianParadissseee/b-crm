@@ -7,6 +7,7 @@ import AppInput from '@/shared/ui/app-input.vue'
 import AppButton from '@/shared/ui/app-button.vue'
 import { useWindowSize } from '@/shared/lib/composables/use-window.ts'
 import { useBackcallStore } from '../models/store/backcall.store.ts'
+import { useOpenModal } from '@/app/providers/store'
 
 const { isResponsive } = useWindowSize(1024)
 
@@ -18,10 +19,16 @@ const handleSubmitData = async (e: Event) => {
   e.preventDefault()
   await getBackCallDto(backCallState.value.dto)
 }
+const isOpenModalStore = useOpenModal()
+const { handleShowModal } = isOpenModalStore
+const { isOpenModal } = storeToRefs(isOpenModalStore)
 </script>
 
 <template>
-  <app-modal>
+  <app-modal
+    :is-open-modal="isOpenModal"
+    :handle-show-modal="handleShowModal"
+  >
     <div class="flex flex-col gap-5">
       <app-title
         :font-size="isResponsive ? 'XL2' : 'XL4'"

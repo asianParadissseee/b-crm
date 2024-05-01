@@ -81,7 +81,7 @@
             height="15"
           />
         </div>
-        <div>
+        <div @click="">
           <img
             :src="UserLarge"
             alt="img for user of large size"

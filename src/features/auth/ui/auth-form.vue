@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import AppInput from '@/shared/ui/app-input.vue'
-// import { AuthDto } from '../models/schema/auth.schema.ts'
 import { useAuthStore } from '../models/store/auth.store.ts'
-// import { reactive } from 'vue'
 import { storeToRefs } from 'pinia'
 import AppButton from '@/shared/ui/app-button.vue'
 

@@ -1,19 +1,20 @@
 <script setup lang="ts">
-import { useOpenModal } from '@/app/providers/store'
-import { storeToRefs } from 'pinia'
 import { onUnmounted, watch } from 'vue'
 
-const isOpenModalStore = useOpenModal()
-const { handleShowModal } = isOpenModalStore
-const { isOpenModal } = storeToRefs(isOpenModalStore)
-
-const handleKeyDown = (event: KeyboardEvent) => {
-  if ((event.key === 'Escape' || event.keyCode === 27) && isOpenModal) {
-    handleShowModal()
-  }
+interface ModalProps {
+  isOpenModal: boolean
+  handleShowModal: () => void
 }
 
-watch(isOpenModal, value => {
+const props = defineProps<ModalProps>()
+
+const handleKeyDown = (event: KeyboardEvent) => {
+  if ((event.key === 'Escape' || event.keyCode === 27) && props.isOpenModal) {
+    props.handleShowModal()
+  }
+}
+//@ts-ignore
+watch(props.isOpenModal, value => {
   if (value) {
     window.addEventListener('keydown', handleKeyDown)
   } else {
@@ -28,7 +29,7 @@ onUnmounted(() => {
 <template>
   <teleport
     to="body"
-    v-if="isOpenModal"
+    v-if="props.isOpenModal"
   >
     <div
       tabindex="-1"
@@ -37,7 +38,7 @@ onUnmounted(() => {
       <div class="w-1/3 min-h-96 bg-white rounded-2xl p-10 relative">
         <div
           class="top-3 right-10 absolute text-smoke cursor-pointer"
-          @click="handleShowModal"
+          @click="props.handleShowModal"
         >
           &#10005;
         </div>
