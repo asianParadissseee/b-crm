@@ -1,5 +1,9 @@
 <script setup lang="ts"></script>
 
-<template>history</template>
+<template>
+
+
+
+</template>
 
 <style scoped lang="scss"></style>

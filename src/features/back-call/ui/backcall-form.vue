@@ -18,7 +18,6 @@ const handleSubmitData = async (e: Event) => {
   e.preventDefault()
   await getBackCallDto(backCallState.value.dto)
 }
-
 </script>
 
 <template>
@@ -36,7 +35,7 @@ const handleSubmitData = async (e: Event) => {
         :align-text="'CENTER'"
         :font-size="'XS'"
         :color="'SMOKE'"
-      >Оставьте свои контакты и наш менеджер свяжется с вами ближайшее время
+        >Оставьте свои контакты и наш менеджер свяжется с вами ближайшее время
       </app-text>
     </div>
     <form

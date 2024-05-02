@@ -3,7 +3,6 @@ import { onUnmounted, watch } from 'vue'
 import { useOpenModal } from '@/app/providers/store'
 import { storeToRefs } from 'pinia'
 
-
 const isOpenModalStore = useOpenModal()
 const { handleShowModal } = isOpenModalStore
 const { isOpenModal } = storeToRefs(isOpenModalStore)
