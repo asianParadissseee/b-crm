@@ -25,7 +25,7 @@ useTitle('Личный кабинет')
     <section class="my-20 flex justify-between">
       <div class="flex flex-col gap-3">
         <navigation-private-office />
-        <div class="w-full min-h-96 p-5 border border-ash">
+        <div class="w-full min-h-96 p-5 border rounded border-ash">
           <component :is="components[currentOfficePage - 1]" />
         </div>
       </div>
