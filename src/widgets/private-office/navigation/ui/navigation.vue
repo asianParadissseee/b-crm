@@ -13,16 +13,8 @@ const links = reactive([
     setCurrentPage: () => setCurrentOfficePage(1)
   },
   {
-    link: 'История',
-    setCurrentPage: () => setCurrentOfficePage(2)
-  },
-  {
-    link: 'Профили',
-    setCurrentPage: () => setCurrentOfficePage(3)
-  },
-  {
     link: 'Рассылки',
-    setCurrentPage: () => setCurrentOfficePage(4)
+    setCurrentPage: () => setCurrentOfficePage(2)
   }
 ])
 </script>

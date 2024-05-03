@@ -45,12 +45,14 @@
     </div>
     <div class="container px-5 max-w-9/12 w-full mx-auto flex items-center justify-between py-5">
       <app-logo />
-      <app-input
-        :placeholder="'Поиск'"
-        :border-color="'GOLD'"
-        :size="'DESKTOP'"
-        is-icon
-      />
+      <div>
+        <app-input
+          :placeholder="'Поиск'"
+          :border-color="'GOLD'"
+          :size="'DESKTOP'"
+          is-icon
+        />
+      </div>
       <div
         @click="handleHref(hrefAttr.TELEPHONE, '+7 (495) 103-48-50')"
         class="cursor-pointer"
