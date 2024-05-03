@@ -1,8 +1,8 @@
 export interface AuthDto {
   email: string
-  fullName: string
+  name: string
   password: string
-  phoneNumber: string
+  telephone: string
 }
 
 export interface AuthResponse {

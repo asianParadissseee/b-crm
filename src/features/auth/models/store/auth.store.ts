@@ -6,10 +6,10 @@ import { http } from '@/shared/api/axios.ts'
 export const useAuthStore = defineStore('auth', () => {
   const authState: AuthSchema = reactive({
     dto: {
-      fullName: '',
+      name: '',
       password: '',
       email: '',
-      phoneNumber: ''
+      telephone: ''
     },
     response: {
       token: ''
