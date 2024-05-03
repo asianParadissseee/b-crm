@@ -23,7 +23,7 @@ const links = reactive([
   <nav class="grid grid-cols-4 rounded">
     <div
       :class="[
-        'border hover:bg-gold transition-all duration-200 cursor-pointer border-ash px-6 py-3',
+        'border hover:bg-gold transition-all duration-200 cursor-pointer  border-ash px-6 py-3',
         id + 1 === currentOfficePage ? 'bg-gold' : 'bg-transparent'
       ]"
       v-for="(link, id) in links"
